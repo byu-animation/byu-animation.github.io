@@ -20,6 +20,11 @@ img {
 	margin-bottom: 15px;
 }
 
+img.icon {
+	display: inline;
+	margin: 0px;
+}
+
 #main-wrapper {
 	background-color: #282c34;
 	padding: 37px;

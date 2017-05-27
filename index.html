@@ -23,7 +23,7 @@
 
 	<!-- Favicon
 	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
-	<link rel="icon" type="image/png" href="../assets/images/icons/byu-browser.png">
+	<link rel="icon" type="image/png" href="images/favicon.png">
 
 </head>
 <body>
@@ -66,6 +66,13 @@
 				<h2>Basic Overview</h2>
 				<p>The <strong>pipeline tools</strong> are here to help you focus more on the art and less on the saving-the-files-into-the-right-place. It also provides some handy tools to make your life a little easier.</p>
 
+				<h3>A Few Words Before Betting Started</h3>
+				<p>	The very first thing you need to understand about pipelines is that it acts like a library. You go to the library, find the book you want, check it out, read it, then return it to the library. The pipeline works the same way: you go to the pipe, check out the scene you want, change it, then return it to the pipeline. That way, people can keep checking out the most updated scene and not do work over again that has already been done.</p>
+				<p>One important difference bewteen the pipeline and a library is that multiple people can check out the same item. This is so that when Mike is working on something Brennan can still check it out and do tests on it or show it off to someone instead of Mike having a monoploy on the model.</p>
+				<p>Everytime you see the word Grendel you can replace it with the name of your film, Everytime you see the word Grendaya, Grendini, etc, replace it with "TheNameOfYourFilmaya, TheNameOfYourFilmini etc. But for the sake of brevity (and for the sake of our ego) we will just use Grendel, Grendaya, Grendini etc.</p>
+				<p>For fun and to help distiguish between the regular Maya and the Maya that has all of the BYU pipeline tools loaded in we have renamed it and all the other software you will be using. Maya become Grendaya, Houdini become Grendini etc.</p>
+				<p>From what I understand "the pipeline" technically refers to the process by which the film is created from concept to storyboarding to animation to editing to the end. The "pipeline tools" only touch a small section of all of the work that goes into the pipeline. However in this document you may see "pipeline" and "pipeline tools" used interchangably. In this case they both typically refer to the "pipeline tools." Just be aware of that as we move forward and you should be able to distiguish the when pipeline refers to pipeline and when it refers to pipeline tools.</p>
+
 				<h3>Getting Access to the Pipeline Tools</h3>
 				<!-- TODO define what "the group" actually means -->
 				<p>In order to have access to the pipeline you need to be a member of "the group". Talk to Seth and he will be able to add you.</p>
@@ -89,13 +96,14 @@
 				<p>
 					<a href="#asset-def">Assets</a> are either props or characters. Assets are composed of various <a href="#element-def">elements</a>: <a href="#model-def">models</a>, <a href="#rig-def">rigs</a>, <a href="#texture-def">textures</a>, <a href="#design-def">designs</a>, <a href="#material-def">materials</a>, and <a href="#assebly-def">assemblies</a>.
 				</p>
+				<p>A common misconception is that an asset is a model, however the appropriate relationship is to say that an asset has a model, it is a subtle but important difference that is not commonly understood, and when it is understood it is commonly forgotten, or overlooked for ease of speaking. Therefore you may find asset and model are commonly used interchangeably even though they are not the same thing. Just keep that in mind and don't judge us for mixing them up. I suspect your generation will be beyond this mistake and when you are, you can go through this documentation and make the appropriate fixes. Since the model is the most tangible part of an asset, the word asset is commonly used to describe the model, However asset also contain concept art, textures, rigs, etc.</p>
 				<p>
 					<a href="#shot-def">Shots</a> are...well shots I guess. The elements that make a shot are <a href="#animation-def">animations</a>, <a href="#cfx-def">character effects</a>, <a href="#comp-def">compositions</a>, <a href="#fx-def">effects</a>, <a href="#layout-def">layouts</a>, <a href="#lighting-def">lighting</a>, and <a href="#render-def">renders</a>.
 				</p>
 				<p>To better understand how the pipeline works you first should understand the life of these bodies. And to understand the life of a body you need to understand these terms:</p>
 				<h4>Body Creation</h4>
 				<p>In order to do anything you need to create a body. Assets are usually the first bodies to be created and then shots will be made from assets. When you create an asset you will give it a name and the pipeline tools will construct a bunch of folders to store the various elements of the asset. These folders start out empty so we need to fill them with the asset elements. In order to do that we need to publish the asset.</p>
-				<img src = "images/screenshots/element-creation.png"/>
+				<img src = "images/screenshots/body-creation.png"/>
 				<h4>Publishing</h4>
 				<p>First up is to make a part of the assets: the model. Once you have created the model you will need to save it into the pipeline. This is called publishing. When an asset is published, the pipeline tools will make a copy of your file and save it into the pipline. In the case of the model, the pipeline will take your Maya file and make a copy of it to store in the model folder. Once you have published an asset it will be avalible for anyone to see and use. The way to access a file that someone else has published is through checking out the assets.</p>
 				<img src = "images/screenshots/publish.png"/>
@@ -142,7 +150,68 @@
 			<a id="maya-anchor"></a>
 			<div class="twelve columns">
 				<h2>Maya</h2>
-				<p>This is the basic overview of the whole pipeline</p>
+				<p>	For our production, we use Maya for modeling, rigging, and animating. These tools are made to help with those tasks.</p>
+				<p>To access the pipeline, open up Grendaya and look at the row of tabs at the very top. Click the tool shelf tab on the furthest right labeled "Grendel".</p>
+				<img src="images/screenshots/maya-tools-shelf.png">
+
+				<h3><img class="icon" src="images/icons/checkout-icon.png"> Checkout</h3>
+				<p>The checkout button is exactly what it sounds like: you use it to check out, or access, previously worked on scenes or models. When you click it, a window will come up and you will notice that there are 5 tabs: model, rig, layout, anim, and cfx.</p>
+				<img src="images/screenshots/checkout.png">
+				<p>If you are a modeler, you'll find the model you want to check out; if you're an animator, you'll find the scene you need to check out; If you're a CFX (character FX) artist you'll need to check out the animated scene, etc.</p>
+				<p>In the list of assets or shots select the body you want to work on. Notice the box to the right of the list. This box will give you information about the current state of the body: who was the last person to work on it, when was the last time the body was changed, and what things were changed. If everything looks in order, click "Checkout" and Maya will load the file and you will be able to work on it.</p>
+				<p>However if you notice that Eric has been working on Beowulf constantly for several days and the last publish was a week ago it may be that Eric is still working on some changes and has not published them yet. Make sure you communicate with those that are working on the same body as you so that you can avoid duplicating work. Our checkout publish system allows multiple people to check out an asset or shot at the same time so that none of the bodies are locked down. However with this power comes great responsibility! Make sure you are a good comunicator!</p>
+				<p>Another possiblity is that you see "No publishes for this element." That means there is nothing for you to checkout. First you must model the asset or create a rig or set up the shot locally and then publish it to the pipeline.</p>
+
+				<h3><img class="icon" src="images/icons/create-body-icon.png"> Create Body</h3>
+				<img src="images/screenshots/body-creation.png">
+				<p>As discussed in the basic overview section, creating a body will add a new asset or shot to the project. After the body is created you will then be able to publish and checkout it's various parts. When you click this button, a window will come up that has two tabs, "Asset" and "Shot". If you are making a new asset, you will name it under the asset tab; if you are making a new shot, you will name it under the shot tab. Following proper naming conventions (that have been extablished by those in charge of the film), type in the name of the asset or shot and then click "Ok." The body is now added to the project and is ready to recieve it's first publish!</p>
+
+				<h3><img class="icon" src="images/icons/publish-icon.png"> Publish</h3>
+				<p>The publish button will allow you to upload your model or scene's progress to the pipeline so that others can access it. After checking out a model or scene, you can modify it then publish it back out. Once your asset is published, you should be able to check it out any time you or someone else needs it. Your publishes will replace the previous publishes but it will not overwrite them. This allows you return to a previous version with a rollback (see further down below).</p>
+				<img src="images/screenshots/publish.png">
+				<h4>Your First Publish</h4>
+				<p>A little information on how the pipeline works (If this is intimidating move on to the next paragraph which contains the instructions you need). In order to publish your work the pipeline tools copy your file and adds it to the appropriate production folder. Before doing so it moves the old version into a backup location so it can be restored in the event that you need to roll back. As a result, in order to copy your file, there needs to be a file to copy. So if you have not ever saved the file you are working on then there is no file to be copied, when the pipeline tried to copy the nonexistant file Maya will crash and you will loose all of your work. This shouldn't be a problem because you are wise artist who always frequently saves your work because you understand how volatile modeling softwares are to begin with and then to top it off with having that software run additional software (the pipeline tools) that was written by studens who still don't know what they are doing, you are of course very reluctent to trust the software and you save your work every couple of minutes. So I'm sure you won't even run into this problem ever. But just in case...</p>
+				<p>Make sure that you save the file the first at least once before you try to publish for the first time! It's a good practice anyways and in this case it is essential to making this process work! But I guess if you don't follow these instructions the worst case senario is that Maya crahses, you loose all of you work, and you (hopefully at this point) learn the hard way that you should freqeuntly save your work, especailly before entrusting it to a bit of code written by students!</p>
+				<p>For future publishes you shouldn't have to save before you publish (the pipeline tools will do that for you, they just need a file to work with, which they have now that it has been published at least once). However, I would remind you about the foolishness of putting too much trust in imperfect software (Note: All software is imperfect!) and I would save your work all the time. Even though it is not technically required at this point you should be doing it frequently anyways!</p>
+				<p>Bottom line: On your first publish, <strong>you must save your file locally beforehand</strong> or it will not upload correctly.</p>
+
+				<h3><img class="icon" src="images/icons/set-frame-range-icon.png"> Set Current Frame Range</h3>
+				<p>Theoretically, this would read into the Asset Browser app thing that we have and make it easier for you to make the correct frame range on any given animated shot. However, we aren't using the Asset Browser anymore, and this button essentially does nothing. So don't click it.</p>
+
+				<h3><img class="icon" src="images/icons/playblast-icon.png"> Playblast this Shot</h3>
+				<p>A playblast is essentially making a really low-res, non-shaded render that takes seconds instead of hours. Use this to play back your animation in real time, as playing your animation in the viewport (even in the real-time setting) can be inaccurate.</p>
+
+
+				<h3><img class="icon" src="images/icons/export-icon.png"> Export as Alembic</h3>
+				<p>An alembic is essentially an .obj file for animated objects. It will export your animation into a format that other packages like Houdini can read. Uploading an alembic to the pipe is a way to back up your file and keep the animation safe even if your animation file explodes, but keep in mind that uploading alembics constantly will slow down the pipe for everyone if it becomes too full of files. We recommend that you explort your alembic to the pipe either when you are finished with your animation or reach a major checkpoint. (You may export your animation as an alembic to your local drive (using Maya's built in exporter) as often as you want though.)</p>
+
+
+				<h3><img class="icon" src="images/icons/tag-icon.png"> Tag Selected Objects for Export</h3>
+				<p>When you are animating a scene, you will probably have your character(s) walking through a set or environment that you aren't necessarily animating. When you tag objects for export, you are telling the computer which objects you DID animate so it knows which ones to export as an alembic. You only have to do this once per scene.
+				To do this, select all your animated objects then click the button. Be sure to only select objects that you've animated (including characters, props, and moving objects).</p>
+
+				<h3><img class="icon" src="images/icons/untag-icon.png"> Untag Selected Objects for Export</h3>
+				<p>If you want to change which objects are exporting as an alembic, you can select the objects you want to exclude and click this button. You only have to do this once. And since objects are untagged by default, you should only have to do it to objects that have been tagged previously.</p>
+
+				<h3><img class="icon" src="images/icons/reference-icon.png"> Reference a Model or Rig</h3>
+				<img src="images/screenshots/reference.png">
+				<p>A reference is like importing a model or rig into your scene except it pulls from another location and updates as the owner of that file updates it. This is especially important for character rigs as the riggers will continue to polish deformations and your referenced rig will update with those changes. You will need to re-reference your rig(s) every time a change is made to the rig in order to see it in your animation; this will not affect your keyframes.
+				Other notes: You cannot modify a model or rig when it is referenced. Referenced rigs are generally faster and less expensive to run than the real rig itself.</p>
+
+				<h3><img class="icon" src="images/icons/inspire-icon.png"> Inspirational Quote of the Day (AKA the Brent Button)</h3>
+				<p>Click to be inspired by your favorite faculty's inspirational quotes. Also submit more quotes to the tool_suggestions channel on Slack.</p>
+
+
+				<h3><img class="icon" src="images/icons/gnome-icon.png"> Gnomic Test Geo (AKA Summon the Garden Gnome button)</h3>
+				<img src="images/screenshots/gnome.png">
+				<p>Need to blow something up or set it on fire? Have we got the gnome for you! This is kind of like Myth Buster's "Buster" test dummy except a garden gnome and also virtual. Have fun, go play with scissors and fire on us.</p>
+
+
+				<h3><img class="icon" src="images/icons/roll-back-icon.png"> Rollback Body to Previous Version</h3>
+				<p>Occasionally, you might publish a scene or model that for some reason you wish you didn't because the last version was better. Or maybe the current published version has crashed and there's no saving it, so the best bet is to go back in time and reverse the damage.</p>
+				<p>That's what rollback is for! Rollback will take you back to a previous version. To use it, click the element you want to rollback to and click the  date of the version you want.</p>
+				<img src="images/screenshots/roll-back.png"
+				<p>To roll back an element first check it out. Then click the roll back button. A window will come up that will list all of the previous publishes for that element. Click on the publish that you want to go back to and click "Rollback." Maya will essensially recall the file from that past publish and re-publish it so it becomes the current publish (Note: In the list of publishes this publish will now occure twice, once when it was oringinally published and again when it was rolled back). It will load publish into Maya and you can then start working on it.</p>
 			</div>
 		</div>
 		<div class "row" id="houdini">
