@@ -1,11 +1,23 @@
 body {
 	background-color: #21252b;
 	color: #abb2bf;
-	font-family: 'Open Sans', sans-serif;
+	font-family: 'Nunito', sans-serif;
+	font-weight: 400;
 }
 
-h1, h2, h3, h4, h5, h6 {
-	font-family: 'Jim Nightshade', cursive;
+strong {
+	font-family: 'Nunito', sans-serif;
+	font-weight: 700;
+}
+
+h1, h2, h3 {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 300;
+}
+
+h4, h5, h6 {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 600;
 }
 
 h1, h2 {
@@ -39,4 +51,13 @@ img.icon {
 	position: fixed;
 	bottom: 10px;
 	right: 10px;
+}
+
+.list-title {
+	list-style: none;
+	text-align: center;
+}
+
+.row {
+	margin-bottom: 20px;
 }

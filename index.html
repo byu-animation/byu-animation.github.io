@@ -13,7 +13,7 @@
 
 	<!-- FONT
 	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
-	<link href="https://fonts.googleapis.com/css?family=Jim+Nightshade|Open+Sans|Meddon|Homemade+Apple" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,600|Nunito:400,700|Homemade+Apple" rel="stylesheet">
 
 	<!-- CSS
 	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -33,62 +33,81 @@
 	<div class="container" id="main-wrapper">
 		<div class="row">
 			<div class="twelve columns" style="margin-top: 5%">
-				<h1>How to Use the BYU Pipeline Tools (Under Construction)</h1>
+				<h1>How to Use the BYU Pipeline Tools</h1>
 				<p>Hello friend,</p>
 				<p>You are here because you have decided to embark on an epic journey to complete a short film.</p>
 				<p>Look around you. You are in the midst of the most brilliant creative minds in the history of the world. Look down. You are one of those creative minds. Now all you need is a set of tools to help unlock your creative prowess and work in harmony with the titans around you.</p>
-				<p>My friend, if you seek those sacred tools then you have come the right place. These are the BYU Pipeline tools. These tools will help you unlock the mysteries of team work and harmony. And this documentation will be your guide to learning the full potential of these tools and thus uncover the full potential of you!</p>
+				<p>My friend, if you seek those sacred tools then you have come the right place. These are the BYU Pipeline tools. These tools will help you unlock the mysteries of teamwork and harmony. And this documentation will be your guide to learning the full potential of these tools and thus uncover the full potential of you!</p>
 				<p>Read on and you will master your fate and take control of your destiny!</p>
 				<p>Best of Luck,</p>
 				<p class="signiture">Pipeline Management</p>
 				<p>Pipeline Management</p>
 			</div>
 		</div>
-		<div class "row" id="table-of-contents">
+		<div class="row" id="table-of-contents">
 			<div class="twelve columns">
 				<h2>Table of Contents</h2>
-				<ul>
-					<a href="#overview-anchor"><li>Basic Overview</li></a>
-					<a href="#maya-anchor"><li>Maya</li></a>
-					<a href="#houdini-anchor"><li>Houdini</li></a>
-					<a href="#mari-anchor"><li>Mari</li></a>
-					<a href="#nuke-anchor"><li>Nuke</li></a>
-					<a href="#slack-anchor"><li>Slack</li></a>
-					<a href="#element-browser-anchor"><li>Element Browser</li></a>
-					<a href="#advanced-anchor"><li>Advanced</li></a>
-					<a href="#glossary-anchor"><li>Glossary</li></a>
-				</ul>
 			</div>
 		</div>
-		<div class "row" id="overview">
+		<div class="row">
+			<ul class="one-third column">
+				<li class="list-title"><h5>Introduction</h5></li>
+				<li><a href="#overview-anchor">Basic Overview</a>
+					<ul>
+						<li><a href="#preface-anchor">Preface</a></li>
+						<li><a href="#getting-access-anchor">Getting Access</a></li>
+						<li><a href="#important-terms-anchor">Important Terms</a></li>
+						<li><a href="#life-of-an-asset-anchor">Life of an Asset</a></li>
+					</ul>
+				</li>
+			</ul>
+			<ul class="one-third column">
+				<li class="list-title"><h5>Software</h5></li>
+				<li><a href="#maya-anchor">Maya</a></li>
+				<li><a href="#houdini-anchor">Houdini</a></li>
+				<li><a href="#mari-anchor">Mari</a></li>
+				<li><a href="#nuke-anchor">Nuke</a></li>
+				<li><a href="#slack-anchor">Slack</a></li>
+			</ul>
+			<ul class="one-third column">
+				<li class="list-title"><h5>Reference</h5></li>
+				<li><a href="#element-browser-anchor">Production Sheet</a></li>
+				<li><a href="#advanced-anchor">Advanced</a></li>
+				<li><a href="#glossary-anchor">Glossary</a></li>
+			</ul>
+		</div>
+		<div class="row" id="overview">
 			<a id="overview-anchor"></a>
 			<div class="twelve columns">
 				<h2>Basic Overview</h2>
 				<p>The <strong>pipeline tools</strong> are here to help you focus more on the art and less on the saving-the-files-into-the-right-place. It also provides some handy tools to make your life a little easier.</p>
 
-				<h3>A Few Words Before Betting Started</h3>
+				<a id="preface-anchor"></a>
+				<h3>Preface</h3>
 				<p>	The very first thing you need to understand about pipelines is that it acts like a library. You go to the library, find the book you want, check it out, read it, then return it to the library. The pipeline works the same way: you go to the pipe, check out the scene you want, change it, then return it to the pipeline. That way, people can keep checking out the most updated scene and not do work over again that has already been done.</p>
-				<p>One important difference bewteen the pipeline and a library is that multiple people can check out the same item. This is so that when Mike is working on something Brennan can still check it out and do tests on it or show it off to someone instead of Mike having a monoploy on the model.</p>
-				<p>Everytime you see the word Grendel you can replace it with the name of your film, Everytime you see the word Grendaya, Grendini, etc, replace it with "TheNameOfYourFilmaya, TheNameOfYourFilmini etc. But for the sake of brevity (and for the sake of our ego) we will just use Grendel, Grendaya, Grendini etc.</p>
-				<p>For fun and to help distiguish between the regular Maya and the Maya that has all of the BYU pipeline tools loaded in we have renamed it and all the other software you will be using. Maya become Grendaya, Houdini become Grendini etc.</p>
-				<p>From what I understand "the pipeline" technically refers to the process by which the film is created from concept to storyboarding to animation to editing to the end. The "pipeline tools" only touch a small section of all of the work that goes into the pipeline. However in this document you may see "pipeline" and "pipeline tools" used interchangably. In this case they both typically refer to the "pipeline tools." Just be aware of that as we move forward and you should be able to distiguish the when pipeline refers to pipeline and when it refers to pipeline tools.</p>
+				<p>One important difference between the pipeline and a library is that multiple people can check out the same item. This is so that when Mike is working on something Brennan can still check it out and do tests on it or show it off to someone instead of Mike having a monopoly on the model.</p>
+				<p>Every time you see the word Grendel you can replace it with the name of your film, Every time you see the word Grendaya, Grendini, etc, replace it with "TheNameOfYourFilmaya, TheNameOfYourFilmini etc. But for the sake of brevity (and for the sake of our ego) we will just use Grendel, Grendaya, Grendini etc.</p>
+				<p>For fun and to help distinguish between the regular Maya and the Maya that has all of the BYU pipeline tools loaded in we have renamed it and all the other software you will be using. Maya become Grendaya, Houdini become Grendini etc.</p>
+				<p>From what I understand "the pipeline" technically refers to the process by which the film is created from concept to storyboarding to animation to editing to the end. The "pipeline tools" only touch a small section of all of the work that goes into the pipeline. However in this document you may see "pipeline" and "pipeline tools" used interchangeably. In this case they both typically refer to the "pipeline tools." Just be aware of that as we move forward and you should be able to distinguish the when pipeline refers to pipeline and when it refers to pipeline tools.</p>
 
+				<a id="getting-access-anchor"></a>
 				<h3>Getting Access to the Pipeline Tools</h3>
 				<!-- TODO define what "the group" actually means -->
 				<p>In order to have access to the pipeline you need to be a member of "the group". Talk to Seth and he will be able to add you.</p>
-				<p>Once you are part of the group open up a file explorer and naviagate to /groups/FILM/byu-pipeline-tools/. FILM will be the name of the group (ie grendel, dusk, etc). This directory is where all of the tools are located.</p>
-				<p>There will be a number of icons, most of which will be some humorous combination of the film name and the software. These icons will lauch the software and load all of our custom tools.</p>
+				<p>Once you are part of the group open up a file explorer and navigate to /groups/FILM/byu-pipeline-tools/. FILM will be the name of the group (ie grendel, dusk, etc). This directory is where all of the tools are located.</p>
+				<p>There will be a number of icons, most of which will be some humorous combination of the film name and the software. These icons will launch the software and load all of our custom tools.</p>
 				<img src = "images/screenshots/byu-pipeline-tools.png"/>
 				<p>To add these icons to your desktop:
 					<ol>
 						<li>Right click on the icon</li>
 						<li>Click 'Make Link'</li>
 						<li>Right click on the link that was just created</li>
-						<li>Click 'Move to' -> 'Desktop'</li>
+						<li>Click 'Move to' -&#62; 'Desktop'</li>
 					</ol>
 				</p>
 				<p>Hopefully that is the last time you will have to go into that folder. Should you find yourself interested in what else is there you can learn more in the advanced section.</p>
 
+				<a id="important-terms-anchor"></a>
 				<h3>Important Terms</h3>
 				<p>
 					The pipeline handles two different types of <a href="#body-def">bodies</a>: Assets and Shots.
@@ -96,7 +115,7 @@
 				<p>
 					<a href="#asset-def">Assets</a> are either props or characters. Assets are composed of various <a href="#element-def">elements</a>: <a href="#model-def">models</a>, <a href="#rig-def">rigs</a>, <a href="#texture-def">textures</a>, <a href="#design-def">designs</a>, <a href="#material-def">materials</a>, and <a href="#assebly-def">assemblies</a>.
 				</p>
-				<p>A common misconception is that an asset is a model, however the appropriate relationship is to say that an asset has a model, it is a subtle but important difference that is not commonly understood, and when it is understood it is commonly forgotten, or overlooked for ease of speaking. Therefore you may find asset and model are commonly used interchangeably even though they are not the same thing. Just keep that in mind and don't judge us for mixing them up. I suspect your generation will be beyond this mistake and when you are, you can go through this documentation and make the appropriate fixes. Since the model is the most tangible part of an asset, the word asset is commonly used to describe the model, However asset also contain concept art, textures, rigs, etc.</p>
+				<p>A common misconception is that an asset is the same as a model, however the appropriate relationship (at least as the pipeline tools see it) is to say that an asset has a model, it is a subtle difference that is hard to enforse as we speak and probably is not worth enforsing since to make things more difficult the word asset is a very handy word to refer to a useful or valuable thing. So everything is that is useful or valuable is also an asset. So just keep that in mind as you reading through all of this.</p>
 				<p>
 					<a href="#shot-def">Shots</a> are...well shots I guess. The elements that make a shot are <a href="#animation-def">animations</a>, <a href="#cfx-def">character effects</a>, <a href="#comp-def">compositions</a>, <a href="#fx-def">effects</a>, <a href="#layout-def">layouts</a>, <a href="#lighting-def">lighting</a>, and <a href="#render-def">renders</a>.
 				</p>
@@ -105,23 +124,24 @@
 				<p>In order to do anything you need to create a body. Assets are usually the first bodies to be created and then shots will be made from assets. When you create an asset you will give it a name and the pipeline tools will construct a bunch of folders to store the various elements of the asset. These folders start out empty so we need to fill them with the asset elements. In order to do that we need to publish the asset.</p>
 				<img src = "images/screenshots/body-creation.png"/>
 				<h4>Publishing</h4>
-				<p>First up is to make a part of the assets: the model. Once you have created the model you will need to save it into the pipeline. This is called publishing. When an asset is published, the pipeline tools will make a copy of your file and save it into the pipline. In the case of the model, the pipeline will take your Maya file and make a copy of it to store in the model folder. Once you have published an asset it will be avalible for anyone to see and use. The way to access a file that someone else has published is through checking out the assets.</p>
+				<p>First up is to make a part of the assets: the model. Once you have created the model you will need to save it into the pipeline. This is called publishing. When an asset is published, the pipeline tools will make a copy of your file and save it into the pipeline. In the case of the model, the pipeline will take your Maya file and make a copy of it to store in the model folder. Once you have published an asset it will be available for anyone to see and use. The way to access a file that someone else has published is through checking out the assets.</p>
 				<img src = "images/screenshots/publish.png"/>
-				<p>When you publish an asset make sure that you leave a good comment about the changes that you made. This makes it easy to track important changes on the asset and will become crutial if ever you need to rollback (discussed later).</p>
-				<h4>Check Out</h4>
-				<p>To use an asset you need to check it out. Checking out is the opposite of publishing. When you checkout an asset the pipeline tools will create a copy of the production asset and save it to your personal files so that you can work on it. You can make what ever changes you need to it and when you are done you publish the asset again so that everyone can have access to your changes.</p>
+				<p>When you publish an asset make sure that you leave a good comment about the changes that you made. This makes it easy to track important changes on the asset and will become crucial if ever you need to rollback (discussed later).</p>
+				<h4>Checkout</h4>
+				<p>To use an asset you need to check it out. Checking out is the opposite of publishing. When you check out an asset the pipeline tools will create a copy of the production asset and save it to your personal files so that you can work on it. You can make what ever changes you need to it and when you are done you publish the asset again so that everyone can have access to your changes.</p>
 				<img src = "images/screenshots/checkout.png"/>
 				<p>Since the pipeline tools make a personal copy of the file for you, you can modify and save changes as you wish without worrying about changing the production version until you are ready to publish.</p>
 				<p>
-					Multiple people can checkout the same asset and work on it at the same time. This is nice because it means that multiple people can look at, or do tests on or work on the the same file. However you need to watch out. Imagine a case where two people, Austin and Kalee, both are working on the model for Grendel. Austin is hard at work modeling Grendel's arms; it has taken him hours. Kalee has checked out Grendel's model as well to check on it's progress. Since Austin hasn't published his changes yet Kalee has an old version. She notices that Grendel's eyes are backwards and in a couple of seconds she fixes them. Austin finishes his changes and publish. Moments later Kalee publishes her changes, but her version doesn't include Austin's changes. There is not way to merge the changes, so the pipeline will use the model that was published most recently, in this case Kalee's version that has the eyes the right way but has the wrong arms. So make sure that you are comunicating will all the people that are working on your asset.
+					Multiple people can check out the same asset and work on it at the same time. This is nice because it means that multiple people can look at, or do tests on or work on the the same file. However you need to watch out. Imagine a case where two people, Austin and Kalee, both are working on the model for Grendel. Austin is hard at work modeling Grendel's arms; it has taken him hours. Kalee has checked out Grendel's model as well to check on it's progress. Since Austin hasn't published his changes yet Kalee has an old version. She notices that Grendel's eyes are backwards and in a couple of seconds she fixes them. Austin finishes his changes and publish. Moments later Kalee publishes her changes, but her version doesn't include Austin's changes. There is no way to merge the changes, so the pipeline will use the model that was published most recently, in this case Kalee's version that has the eyes the right way but has the wrong arms. So make sure that you are communicating will all the people that are working on your asset.
 				</p>
-				<p>Now in the case of Austin and Kaylee it is likely that they would actually want to use Austin's version and just apply Kalee's quick changes to it. Thankfully there is a way to revert a production model to a previous version, roll back!</p>
+				<p>Now in the case of Austin and Kalee it is likely that they would actually want to use Austin's version and just apply Kalee's quick changes to it. Thankfully there is a way to revert a production model to a previous version, rollback!</p>
 				<h4>Rollback</h4>
-				<p>When you publish an asset the pipeline will keep track of the history of that item. So at anytime if you need to revert to a previous verision of the asset you can rollback the changes.</p>
-				<img src = "images/screenshots/roll-back.png"/>
-				<p>In the case of Kalee and Austin (discussed in the checkout section), we see that Austin needs to restore his version. He would scroll through the revision history and find his version. If he doesn't remember the exact time of his publish he can look in the comment section for the descriptive comment that he wrote when he published it. Then he can roll back to his verision, re-do Kalee's changes and republish.</p>
+				<p>When you publish an asset the pipeline will keep track of the history of that item. So at anytime if you need to revert to a previous version of the asset you can rollback the changes.</p>
+				<img src = "images/screenshots/rollback.png"/>
+				<p>In the case of Kalee and Austin (discussed in the Checkout section), we see that Austin needs to restore his version. He would scroll through the revision history and find his version. If he doesn't remember the exact time of his publish he can look in the comment section for the descriptive comment that he wrote when he published it. Then he can rollback to his version, re-do Kalee's changes and republish.</p>
 
-				<h3>The Life of a Pipeline Element</h3>
+				<a id="life-of-an-asset-anchor"></a>
+				<h3>The Life of a Pipeline Asset</h3>
 				<p>Now let's see these in context of the life of an asset</p>
 				<!--TODO: Fill in all the missing pieces in the life span of an asset. Use the information Kalee gave in slack-->
 				<ol>
@@ -132,11 +152,11 @@
 					<li>Make and publish a model for the asset in Maya</li>
 					<li>Make and publish a rig for the asset in Maya</li>
 					<li>Create a shot</li>
-					<li>Refrence the model and rig into the shot, make an animation in Maya, and publish it to the shot</li>
+					<li>Reference the model and rig into the shot, make an animation in Maya, and publish it to the shot</li>
 					<!--TODO this one is terrible<li> Layout all of the various props in the scence?? and publish is to the shot</li>-->
 					<li>Create textures for the the asset in Mari</li>
 					<li>Assemble the asset in Houdini using the models and textures created earlier and publish it to the asset.</li>
-					<li>Checkout the shot in Houdini</li>
+					<li>Check out the shot in Houdini</li>
 					<li>Bring in all of the various props for the shot in Houdini, add lights and then publish it to the shot</li>
 					<li>Render the scene in Houdini</li>
 					<li>Bring renders from Houdini into Nuke, and publish the composition to the shot</li>
@@ -146,7 +166,7 @@
 				<p>That is the general overview of the pipeline and what it is doing. Now we will move on to the different tools in the various softwares.</p>
 			</div>
 		</div>
-		<div class "row" id="maya">
+		<div class="row" id="maya">
 			<a id="maya-anchor"></a>
 			<div class="twelve columns">
 				<h2>Maya</h2>
@@ -158,20 +178,20 @@
 				<p>The checkout button is exactly what it sounds like: you use it to check out, or access, previously worked on scenes or models. When you click it, a window will come up and you will notice that there are 5 tabs: model, rig, layout, anim, and cfx.</p>
 				<img src="images/screenshots/checkout.png">
 				<p>If you are a modeler, you'll find the model you want to check out; if you're an animator, you'll find the scene you need to check out; If you're a CFX (character FX) artist you'll need to check out the animated scene, etc.</p>
-				<p>In the list of assets or shots select the body you want to work on. Notice the box to the right of the list. This box will give you information about the current state of the body: who was the last person to work on it, when was the last time the body was changed, and what things were changed. If everything looks in order, click "Checkout" and Maya will load the file and you will be able to work on it.</p>
-				<p>However if you notice that Eric has been working on Beowulf constantly for several days and the last publish was a week ago it may be that Eric is still working on some changes and has not published them yet. Make sure you communicate with those that are working on the same body as you so that you can avoid duplicating work. Our checkout publish system allows multiple people to check out an asset or shot at the same time so that none of the bodies are locked down. However with this power comes great responsibility! Make sure you are a good comunicator!</p>
-				<p>Another possiblity is that you see "No publishes for this element." That means there is nothing for you to checkout. First you must model the asset or create a rig or set up the shot locally and then publish it to the pipeline.</p>
+				<p>In the list of assets or shots select the body you want to work on. Notice the box to the right of the list. This box will give you information about the current state of the body: who was the last person to work on it, when was the last time the body was changed, and what things were changed. If everything looks in order, click "Check Out" and Maya will load the file and you will be able to work on it.</p>
+				<p>However if you notice that Eric has been working on Beowulf constantly for several days and the last publish was a week ago it may be that Eric is still working on some changes and has not published them yet. Make sure you communicate with those that are working on the same body as you so that you can avoid duplicating work. Our checkout-publish system allows multiple people to check out an asset or shot at the same time so that none of the bodies are locked down. However with this power comes great responsibility! Make sure you are a good communicator!</p>
+				<p>Another possibility is that you see "No publishes for this element." That means there is nothing for you to check out. First you must model the asset or create a rig or setup the shot locally and then publish it to the pipeline.</p>
 
 				<h3><img class="icon" src="images/icons/create-body-icon.png"> Create Body</h3>
 				<img src="images/screenshots/body-creation.png">
-				<p>As discussed in the basic overview section, creating a body will add a new asset or shot to the project. After the body is created you will then be able to publish and checkout it's various parts. When you click this button, a window will come up that has two tabs, "Asset" and "Shot". If you are making a new asset, you will name it under the asset tab; if you are making a new shot, you will name it under the shot tab. Following proper naming conventions (that have been extablished by those in charge of the film), type in the name of the asset or shot and then click "Ok." The body is now added to the project and is ready to recieve it's first publish!</p>
+				<p>As discussed in the basic overview section, creating a body will add a new asset or shot to the project. After the body is created you will then be able to publish and check out it's various parts. When you click this button, a window will come up that has two tabs, "Asset" and "Shot". If you are making a new asset, you will name it under the asset tab; if you are making a new shot, you will name it under the shot tab. Following proper naming conventions (that have been established by those in charge of the film), type in the name of the asset or shot and then click "Ok." The body is now added to the project and is ready to receive its first publish!</p>
 
 				<h3><img class="icon" src="images/icons/publish-icon.png"> Publish</h3>
 				<p>The publish button will allow you to upload your model or scene's progress to the pipeline so that others can access it. After checking out a model or scene, you can modify it then publish it back out. Once your asset is published, you should be able to check it out any time you or someone else needs it. Your publishes will replace the previous publishes but it will not overwrite them. This allows you return to a previous version with a rollback (see further down below).</p>
 				<img src="images/screenshots/publish.png">
 				<h4>Your First Publish</h4>
-				<p>A little information on how the pipeline works (If this is intimidating move on to the next paragraph which contains the instructions you need). In order to publish your work the pipeline tools copy your file and adds it to the appropriate production folder. Before doing so it moves the old version into a backup location so it can be restored in the event that you need to roll back. As a result, in order to copy your file, there needs to be a file to copy. So if you have not ever saved the file you are working on then there is no file to be copied, when the pipeline tried to copy the nonexistant file Maya will crash and you will loose all of your work. This shouldn't be a problem because you are wise artist who always frequently saves your work because you understand how volatile modeling softwares are to begin with and then to top it off with having that software run additional software (the pipeline tools) that was written by studens who still don't know what they are doing, you are of course very reluctent to trust the software and you save your work every couple of minutes. So I'm sure you won't even run into this problem ever. But just in case...</p>
-				<p>Make sure that you save the file the first at least once before you try to publish for the first time! It's a good practice anyways and in this case it is essential to making this process work! But I guess if you don't follow these instructions the worst case senario is that Maya crahses, you loose all of you work, and you (hopefully at this point) learn the hard way that you should freqeuntly save your work, especailly before entrusting it to a bit of code written by students!</p>
+				<p>A little information on how the pipeline works (If this is intimidating move on to the next paragraph which contains the instructions you need). In order to publish your work the pipeline tools copy your file and adds it to the appropriate production folder. Before doing so it moves the old version into a backup location so it can be restored in the event that you need to rollback. As a result, in order to copy your file, there needs to be a file to copy. So if you have not ever saved the file you are working on then there is no file to be copied, when the pipeline tried to copy the nonexistent file Maya will crash and you will loose all of your work. This shouldn't be a problem because you are wise artist who always frequently saves your work because you understand how volatile modeling softwares are to begin with and then to top it off with having that software run additional software (the pipeline tools) that was written by students who still don't know what they are doing, you are of course very reluctant to trust the software and you save your work every couple of minutes. So I'm sure you won't even run into this problem ever. But just in case...</p>
+				<p>Make sure that you save the file the first at least once before you try to publish for the first time! It's a good practice anyways and in this case it is essential to making this process work! But I guess if you don't follow these instructions the worst case scenario is that Maya crashes, you lose all of you work, and you (hopefully at this point) learn the hard way that you should frequently save your work, especially before entrusting it to a bit of code written by students!</p>
 				<p>For future publishes you shouldn't have to save before you publish (the pipeline tools will do that for you, they just need a file to work with, which they have now that it has been published at least once). However, I would remind you about the foolishness of putting too much trust in imperfect software (Note: All software is imperfect!) and I would save your work all the time. Even though it is not technically required at this point you should be doing it frequently anyways!</p>
 				<p>Bottom line: On your first publish, <strong>you must save your file locally beforehand</strong> or it will not upload correctly.</p>
 
@@ -179,11 +199,11 @@
 				<p>Theoretically, this would read into the Asset Browser app thing that we have and make it easier for you to make the correct frame range on any given animated shot. However, we aren't using the Asset Browser anymore, and this button essentially does nothing. So don't click it.</p>
 
 				<h3><img class="icon" src="images/icons/playblast-icon.png"> Playblast this Shot</h3>
-				<p>A playblast is essentially making a really low-res, non-shaded render that takes seconds instead of hours. Use this to play back your animation in real time, as playing your animation in the viewport (even in the real-time setting) can be inaccurate.</p>
+				<p>A playblast is essentially making a really low-res, non-shaded render that takes seconds instead of hours. Use this to playback your animation in real time, as playing your animation in the viewport (even in the real-time setting) can be inaccurate.</p>
 
 
 				<h3><img class="icon" src="images/icons/export-icon.png"> Export as Alembic</h3>
-				<p>An alembic is essentially an .obj file for animated objects. It will export your animation into a format that other packages like Houdini can read. Uploading an alembic to the pipe is a way to back up your file and keep the animation safe even if your animation file explodes, but keep in mind that uploading alembics constantly will slow down the pipe for everyone if it becomes too full of files. We recommend that you explort your alembic to the pipe either when you are finished with your animation or reach a major checkpoint. (You may export your animation as an alembic to your local drive (using Maya's built in exporter) as often as you want though.)</p>
+				<p>An alembic is essentially an .obj file for animated objects. It will export your animation into a format that other packages like Houdini can read. Uploading an alembic to the pipe is a way to backup your file and keep the animation safe even if your animation file explodes, but keep in mind that uploading alembics constantly will slow down the pipe for everyone if it becomes too full of files. We recommend that you export your alembic to the pipe either when you are finished with your animation or reach a major checkpoint. (You may export your animation as an alembic to your local drive (using Maya's built in exporter) as often as you want though.)</p>
 
 
 				<h3><img class="icon" src="images/icons/tag-icon.png"> Tag Selected Objects for Export</h3>
@@ -207,32 +227,33 @@
 				<p>Need to blow something up or set it on fire? Have we got the gnome for you! This is kind of like Myth Buster's "Buster" test dummy except a garden gnome and also virtual. Have fun, go play with scissors and fire on us.</p>
 
 
-				<h3><img class="icon" src="images/icons/roll-back-icon.png"> Rollback Body to Previous Version</h3>
+				<h3><img class="icon" src="images/icons/rollback-icon.png"> Rollback Body to Previous Version</h3>
 				<p>Occasionally, you might publish a scene or model that for some reason you wish you didn't because the last version was better. Or maybe the current published version has crashed and there's no saving it, so the best bet is to go back in time and reverse the damage.</p>
 				<p>That's what rollback is for! Rollback will take you back to a previous version. To use it, click the element you want to rollback to and click the  date of the version you want.</p>
-				<img src="images/screenshots/roll-back.png"
-				<p>To roll back an element first check it out. Then click the roll back button. A window will come up that will list all of the previous publishes for that element. Click on the publish that you want to go back to and click "Rollback." Maya will essensially recall the file from that past publish and re-publish it so it becomes the current publish (Note: In the list of publishes this publish will now occure twice, once when it was oringinally published and again when it was rolled back). It will load publish into Maya and you can then start working on it.</p>
+				<img src="images/screenshots/rollback.png">
+				<p>To rollback an element first check it out. Then click the rollback button. A window will come up that will list all of the previous publishes for that element. Click on the publish that you want to go back to and click "Rollback." Maya will essentially recall the file from that past publish and republish it so it becomes the current publish (Note: In the list of publishes this publish will now occur twice, once when it was originally published and again when it was rolled back). It will load publish into Maya and you can then start working on it.</p>
 			</div>
 		</div>
-		<div class "row" id="houdini">
+		<div class="row" id="houdini">
 			<a id="houdini-anchor"></a>
 			<div class="twelve columns">
 				<a name="houdini"></a>
 				<h2>Houdini</h2>
+				<p>For our production, we use Houdini for shading, lighting, rendering, and most of the FX.</p>
 				<p>Do you remember all of those neat things you learned back in the Maya section? Well, throw them out. They only partially relate to the Houdini pipeline tools and having them tightly coupled in your mind will lead to errors.</p>
-				<p>Lets take a look at Houdini</p>
-				<p>Go ahead and open the film verison of Houdini. Now at this point Houdini probably didn't load in the shelf like Maya did. To get there you will need to add it.</p>
+				<p>Let's take a look at Houdini</p>
+				<p>Go ahead and open the film version of Houdini. Now at this point Houdini probably didn't load in the shelf like Maya did. To get there you will need to add it.</p>
 				<img src = "images/screenshots/add-houdini-tools-shelf.png"/>
 				<p>With the tools shelf added in, let's take a look at all of the tools.</p>
 				<img src = "images/screenshots/houdini-tools-shelf.png"/>
 				<h3>Create Body</h3>
 				<p>The create body tool here is actually the exact same as the one in Maya, so about forgetting everything what I mean is don't forget this one.</p>
 				<h3>Assemble Asset</h3>
-				<p>To understand how the checkout and publish buttons are different we first need to understand how the asseble asset tool works.</p>
-				<p>In Houdini the method of adding geometry to a scene is typicaly by using the tab menu in the Network View. In order to add our geometry to Houdini we first need to make digital assets for them. Once we have we will be able to simply tab in all of our assets into Houdini. The assemble asset tool creates the digital assets for you.</p>
-				<p>When you click assemble asset you will be greeted with a window that looks remarkably similar to the checkout window. Don't let it fool you! This is not how you will checkout assets in Houdini ever!</p>
+				<p>To understand how the checkout and publish buttons are different we first need to understand how the assemble asset tool works.</p>
+				<p>In Houdini the method of adding geometry to a scene is typically by using the tab menu in the Network View. In order to add our geometry to Houdini we first need to make digital assets for them. Once we have we will be able to simply tab in all of our assets into Houdini. The assemble asset tool creates the digital assets for you.</p>
+				<p>When you click assemble asset you will be greeted with a window that looks remarkably similar to the checkout window. Don't let it fool you! This is not how you will check out assets in Houdini ever!</p>
 				<img src = "images/screenshots/assemble-asset.png"/>
-				<p>Find the asset that you want to turn into a digital asset* and then click checkout. This will load in all of the alembics that maya has exported when you published it there, and create out of them a digtial asset. Once the digital asset is created you can add the shaders for the various objects into the digital asset. Once you are pleased with your work, select the digital asset, and then click publish. Now the digital asset is ready for anybody to tab into their scene</p>
+				<p>Find the asset that you want to turn into a digital asset* and then click "Check Out."" This will load in all of the alembics that maya has exported when you published it there, and create out of them a digital asset. Once the digital asset is created you can add the shaders for the various objects into the digital asset. Once you are pleased with your work, select the digital asset, and then click publish. Now the digital asset is ready for anybody to tab into their scene</p>
 				<p><strong>*Note:</strong> it is likely that the assemble asset window will tell you that there are "no publishes for this element". That is good. That means that nobody has assembled the asset yet. If there is a previous publish that means that the asset has already been assembled and you should be able to tab it into the network view without assembling it again.</p>
 				<p>Once the asset is assembled you no longer need to assemble it. You can just tab it in. If you click assemble asset again it will bring in all of the alembics from maya again but it won't bring in any of the shaders that you created.</p>
 				<p>Review
@@ -240,11 +261,11 @@
 						<li>Click assemble asset</li>
 						<li>Click on the asset you wish to assemble</li>
 						<li>
-							Click checkout, which should lead you to here:
+							Click "Check Out", which should lead you to here:
 							<img src = "images/screenshots/hda.png"/>
 						</li>
 						<li>
-							Add shadders and perform whatever other edits
+							Add shaders and perform whatever other edits
 							<img src = "images/screenshots/shop-net.png"/>
 						</li>
 						<li>Select the digital asset in the network view</li>
@@ -255,58 +276,97 @@
 					<ol>
 						<li>Tab in the asset</li>
 						<li>Select it in the network view</li>
-						<li>Make the neccesary changes</li>
+						<li>Make the necessary changes</li>
 						<li>Select the digital asset in the network view</li>
 						<li>Click publish</li>
 					</ol>
+				</p>
 				<h3>Checkout</h3>
-				<p>Checkout is a little tricky in Houdini. If nothing is selected in the network view when you click checkout it will think you are trying to checkout at shot to work on lighting or fx.</p>
+				<p>Checkout is a little tricky in Houdini. If nothing is selected in the network view when you click "Check Out" it will think you are trying to check out at shot to work on lighting or fx.</p>
 				<img src = "images/screenshots/houdini-checkout-shot.png"/>
-				<p>If you have an asset selected in the network view then it will think that you are trying to checkout that asset. And all you will get is this notification that you did it succesfully. If you have something selected that is not an asset then nothing will happen.</p>
+				<p>If you have an asset selected in the network view then it will think that you are trying to check out that asset. And all you will get is this notification that you did it successfully. If you have something selected that is not an asset then nothing will happen.</p>
 				<img src = "images/screenshots/houdini-checkout-asset.png"/>
+				<h3>Reference</h3>
+				<p>There isn't a reference tool per se but since we are using HDAs you can tab in any asset into Houdini. These act as references that will get updated anytime that the HDA get's updated, But you can also then check out the asset after you have tabbed it in, and then it is no longer a reference but a checked out asset.</p>
 				<h3>Rollback</h3>
+				<p>Rollback works in Houdini similarly to Checkout. If you have an HDA selected then it will allow you to rollback that digital asset. If you have a shot checked out then you will be able to rollback that shot.</p>
 				<h3>Publish</h3>
+				<p>Publish is like Checkout and Rollback. If you have and HDA selected it will publish the HDA. If you don't have anything selected then it will publish a shot. (Note: you can only publish an HDA if you first checked it out.)</p>
 				<h3>Inspire</h3>
+				<p>See also <a href="#maya-inspire-tool">Maya Inspire tool</a>. It's the exact same.</p>
 				<h3>Gnome</h3>
+				<p>This is essentially the same as the Maya Gnomic Test Geo tool but in Houdini it also will load in the gnome's textures!</p>
 			</div>
 		</div>
-		<div class "row" id="mari">
+		<div class="row" id="mari">
 			<a id="mari-anchor"></a>
 			<div class="twelve columns">
 				<h2>Mari</h2>
-				<p>This is the baisc overview of the whole pipeline</p>
+				<p>For our production, we use Mari for painting textures.</p>
+				<p>The Mari tools are still in development. For the time being save your textures into /groups/grendel/production_textures/ when they are ready to go.</p>
 			</div>
 		</div>
-		<div class "row" id="nuke">
+		<div class="row" id="nuke">
 			<a id="nuke-anchor"></a>
 			<div class="twelve columns">
 				<h2>Nuke</h2>
-				<p>This is the baisc overview of the whole pipeline</p>
+				<p>For our production, we use Nuke for compositing.</p>
+				<p>The pipeline tools for Nuke are located in the sidebar</p>
+				<img src="images/screenshots/nuke-tools-shelf.png">
+				<h3>Checkout</h3>
+				<p>Nothing weird here! It's just a pretty straight forward checkout process!</p>
+				<h3>Publish</h3>
+				<p>Nothing weird here! It's just a pretty straight forward publish process!</p>
+				<h3>The Future</h3>
+				<p>There are many tools that could be made for Nuke but haven't been made or even dreamed of. If you have a vision for an awesome tool for Nuke, let us know if the tools-suggestions channel on slack!</p>
 			</div>
 		</div>
-		<div class "row" id="slack">
+		<div class="row" id="slack">
 			<a id="slack-anchor"></a>
 			<div class="twelve columns">
 				<h2>Slack</h2>
-				<p>This is the baisc overview of the whole pipeline</p>
+				<p>For our production, we use Slack for communication.</p>
+				<p>In Slack you can find important links in the important links channel</p>
+				<p>Each department has their own channel where you can collaborate on the current projects, show of your progress, and ask questions.</p>
+				<p>Also check out <a href="http://2018byuanimation.blogspot.com/" target="_blank">the blog</a> for more information.</p>
 			</div>
 		</div>
-		<div class "row" id="element-browser">
+		<div class="row" id="element-browser">
 			<a id="element-browser-anchor"></a>
 			<div class="twelve columns">
-				<h2>Element Browswer</h2>
-				<p>This is the baisc overview of the whole pipeline</p>
+				<h2>Production Sheet</h2>
+				<p>This <a href="https://docs.google.com/spreadsheets/d/1FJA5kKAydy96g65tcNo613BLzah4Rg5QlsbUldysdAk" target="_blank">Google sheet</a> keeps track of the progress on each asset and shot. It keeps track of who is working on what and helps us see what needs the most work.</p>
 			</div>
 		</div>
-		<div class "row" id="advanced">
+		<div class="row" id="advanced">
 			<a id="advanced-anchor"></a>
 			<div class="twelve columns">
 				<h2>Advanced</h2>
-				<p>With any luck at all you won't need this but if you are curious here is some more information about the insides of the pipeline. For even more information look at our <a href="https://github.com/byu-animation/byu-pipeline-tools">git repository</a> or talk to you local pipeline technition.</p>
-				<h3>Switching deffinitions for Houdini Digital Assets</h3>
+				<p>With any luck at all you won't need this but if you are curious here is some more information about the insides of the pipeline. For even more information look at our <a href="https://github.com/byu-animation/byu-pipeline-tools" target="_blank">git repository</a> or talk to you local pipeline technician.</p>
+				<h3>Switching definitions for Houdini Digital Assets</h3>
+				<p>Have you noticed that for some reason when you tab in an HDA that it isn't the same as when someone else tabs it in? Are you particularly frustrated because it's an asset that you assembled? Houdini may have switched HDA definitions on you! Don't worry it's super easy to fix.
+					<ol>
+						<li>Tab in the asset in question</li>
+						<li>Right click on the asset</li>
+						<li>
+							Select "Type Properties"
+							<p>A little window with a ton of different options and setting should appear</p>
+						</li>
+						<li>Find a drop down menu labeled "Switch definition"</li>
+						<li>
+							Click it to reveal a couple different paths to a couple different definitions of the HDA.
+							<p>Likely the one that is selected will be something along the lines of "/groups/grendel/users/USERNAME/ASSET_NAME/ASSET_NAME.hdac"</p>
+						</li>
+						<li>Select the option that is "groups/grendel/production/assets/ASSET_NAME/assembly/main/ASSET_NAME.hdac" to switch to the production definition of the digital asset</li>
+						<li>Click Save</li>
+					</ol>
+				</p>
+				<h3>Where Do File Go When I Check Them Out</h3>
+				<p>When you check out a file the pipeline tools make a copy of the production file for you to work on. This file is yours and you can edit it as you wish without worrying about messing up the production assets.</p>
+				<img src="images/screenshots/users-folder.png">
 			</div>
 		</div>
-		<div class "row" id="glossary">
+		<div class="row" id="glossary">
 			<a id="glossary-anchor"></a>
 			<div class="twelve columns">
 				<h2>Glossary</h2>
@@ -344,6 +404,14 @@
 						Element: elements are the building blocks of bodies.
 					</li>
 					<li>
+						<a id="element-browser-def"></a>
+						Element Browser: a piece of software used to keep track of shots and assets. It never really got off the ground and typically we use a <a href="#element-browser-anchor">Google Sheet</a> to keep track of the progress of all the production bodies.
+					</li>
+					<li>
+						<a id="hda-def"></a>
+						Houdini Digital Asset (HDA)
+					</li>
+					<li>
 						<a id="layout-def"></a>
 						Layouts
 					</li>
@@ -379,53 +447,18 @@
 						<a id="vis-dev-def"></a>
 						Visual Development (Vis Dev)
 					</li>
-					<li></li>
-					<li></li>
-					<li></li>
-					<li></li>
-					<li></li>
 				</ul>
 			</div>
 		</div>
-		<div class "row" id="filler">
-			<a id="filler-anchor"></a>
-			<div class="twelve columns">
-				<h2>Filler</h2>
-				<p>This is just a filler so that we can make sure that our anchors work.</p>
-				<ul>
-					<li></li>
-					<li></li>
-					<li></li>
-					<li></li>
-					<li></li>
-					<li></li>
-					<li></li>
-					<li></li>
-					<li></li>
-					<li></li>
-					<li></li>
-					<li></li>
-					<li></li>
-					<li></li>
-					<li></li>
-					<li></li>
-					<li></li>
-					<li></li>
-					<li></li>
-					<li></li>
-					<li></li>
-					<li></li>
-					<li></li>
-				</ul>
+		<!-- Section Template
+			<div class="row" id="blank">
+				<a id="blank-anchor"></a>
+				<div class="twelve columns">
+					<h2></h2>
+					<p></p>
+				</div>
 			</div>
-		</div>
-		<div class "row" id="blank">
-			<a id="blank-anchor"></a>
-			<div class="twelve columns">
-				<h2>Blank</h2>
-				<p>Copy me and paste me all over the place.</p>
-			</div>
-		</div>
+		-->
 	</div> <!--End Main Wrapper-->
 	<!-- End Document
 	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
