@@ -84,7 +84,7 @@
 
 				<a id="preface-anchor"></a>
 				<h3>Preface</h3>
-				<p>	The very first thing you need to understand about pipelines is that it acts like a library. You go to the library, find the book you want, check it out, read it, then return it to the library. The pipeline works the same way: you go to the pipe, check out the scene you want, change it*, then return it to the pipeline. That way, people can keep checking out the most updated scene and not do work over again that has already been done.</p>
+				<p>The very first thing you need to understand about pipelines is that it acts like a library. You go to the library, find the book you want, check it out, read it, then return it to the library. The pipeline works the same way: you go to the pipe, check out the scene you want, change it*, then return it to the pipeline. That way, people can keep checking out the most updated scene and not do work over again that has already been done.</p>
 				<p>*<strong>*Note:</strong> In that sense it's nothing like a library because typically you should return books to the library in the same condition in which you got it. And in this case you are returning it to the library better than when you picked it up. As a matter of fact there are lots of differences between the pipeline and a library. And we are about to look at another difference here it a bit. So don't hold onto that too tightly analogy.</p>
 				<p>One important difference between the pipeline and a library is that multiple people can check out the same item. This is so that when Mike is working on something Brennan can still check it out and do tests on it or show it off to someone instead of Mike having a monopoly on the model.</p>
 				<p>As we move forward though these instructions please note that every time you see the word Grendel you can replace it with the name of your film, Every time you see the word Grendaya, Grendini, etc, replace it with "TheNameOfYourFilmaya, TheNameOfYourFilmini etc. But for the sake of brevity (and for the sake of our ego) we will just use Grendel, Grendaya, Grendini etc.</p>
@@ -97,7 +97,7 @@
 				<p>In order to have access to the pipeline you need to be a member of "the group". Talk to Seth and he will be able to add you.</p>
 				<p>Once you are part of the group open up a file explorer and navigate to /groups/FILM/byu-pipeline-tools/. FILM will be the name of the group (ie grendel, dusk, etc). This directory is where all of the tools are located.</p>
 				<p>There will be a number of icons, most of which will be some humorous combination of the film name and the software. These icons will launch the software and load all of our custom tools.</p>
-				<img src = "images/screenshots/byu-pipeline-tools.png"/>
+				<img src="images/screenshots/byu-pipeline-tools.png"/>
 				<p>To add these icons to your desktop:
 					<ol>
 						<li>Right click on the icon</li>
@@ -115,8 +115,8 @@
 				</p>
 				<ul>
 					<li>
-						<a href="#asset-def">Assets</a> are either props, accesories, sets, or characters. Assets are composed of various <a href="#element-def">elements</a>: <a href="#model-def">models</a>, <a href="#rig-def">rigs</a>, <a href="#texture-def">textures</a>, <a href="#design-def">designs</a>, <a href="#material-def">materials</a>, and <a href="#assebly-def">assemblies</a>.
-						<p>A common misconception is that an asset is the same as a model, however the appropriate relationship (at least as the pipeline tools see it) is to say that an asset has a model, it is a subtle difference and you will likely hear people (even those that are very familiar with the difference) slip up with it all the time. So just keep in mind as you read through this documentation and talk to others that an asset could potentialy refer to:
+						<a href="#asset-def">Assets</a> are either props, accessories, sets, or characters. Assets are composed of various <a href="#element-def">elements</a>: <a href="#model-def">models</a>, <a href="#rig-def">rigs</a>, <a href="#texture-def">textures</a>, <a href="#design-def">designs</a>, <a href="#material-def">materials</a>, and <a href="#assebly-def">assemblies</a>.
+						<p>A common misconception is that an asset is the same as a model, however the appropriate relationship (at least as the pipeline tools see it) is to say that an asset has a model, it is a subtle difference and you will likely hear people (even those that are very familiar with the difference) slip up with it all the time. So just keep in mind as you read through this documentation and talk to others that an asset could potentially refer to:
 							<ul>
 								<li>something useful or valuable. Everything that is useful or valuable is an asset.</li>
 								<li>short for Houdini Digital Asset</li>
@@ -137,14 +137,23 @@
 				<p><strong>*Note:</strong> For the sake of clarity we will discuss these terms looking at the specific case of the model element of an asset body. But everything should also apply to other elements and other bodies as well.</p>
 				<h4>Body Creation</h4>
 				<p>In order to do anything you need to create a new asset. Assets are usually the first bodies to be created and then shots will be made from assets. Tools will be made as you need them; if you never need them then you will never make them. When you create an asset you will give it a name and the pipeline tools will construct a bunch of folders to store the various elements of the body. For example it will create a model folder that will store the Maya file and the alembic exports for that model. This folder starts out empty but we can fill it by creating the model in Maya and then publishing it to the pipeline.</p>
-				<img src = "images/screenshots/body-creation.png"/>
+				<img src="images/screenshots/body-creation.png"/>
+				<p>If you are creating an asset there are four different types of asset that it could be: Set, Prop, Character, and Accessory. When you create an asset it the body creation tool will ask you which type of asset it is.</p>
+				<img src="images/screenshots/body-creation-asset-type.png"/>
+				<p>It is important that you select the appropriate type at this point because the pipeline will treat the different types very differently. Here are the differences:</p>
+				<ul>
+					<li>Set: Places in the film. These will be made up of props and accessories.</li>
+					<li>Characters: A person or creature in the film.</li>
+					<li>Props: Objects that are used by character. These objects will likely be animated.</li>
+					<li>Accessories: Objects that just sit in the set. These objects will likely not be animated.</li>
+				</ul>
 				<h4>Publishing</h4>
 				<p>First up is to make a part of the assets: the model. Once you have created the model you will need to save it into the pipeline. This is called publishing. When an asset is published, the pipeline tools will make a copy of your file and save it into the pipeline. In the case of the model, the pipeline will take your Maya file and make a copy of it to store in the model folder. Once you have published an asset it will be available for anyone to see and use. The way to access a file that someone else has published is through checking out the assets.</p>
-				<img src = "images/screenshots/publish.png"/>
+				<img src="images/screenshots/publish.png"/>
 				<p>When you publish an asset make sure that you leave a good comment about the changes that you made. This makes it easy to track important changes on the asset and will become crucial if ever you need to rollback (discussed later).</p>
 				<h4>Checkout</h4>
 				<p>To use an asset you need to check it out. Checking out is the opposite of publishing. When you check out an asset the pipeline tools will create a copy of the production asset and save it to your personal files so that you can work on it. You can make whatever changes you need to it and when you are done you publish the asset again so that everyone can have access to your changes.</p>
-				<img src = "images/screenshots/checkout.png"/>
+				<img src="images/screenshots/checkout.png"/>
 				<p>Since the pipeline tools make a personal copy of the file for you, you can modify and save changes as you wish without worrying about changing the production version until you are ready to publish.</p>
 				<p>
 					Multiple people can check out the same asset and work on it at the same time. This is nice because it means that multiple people can look at, do tests on, or work on the the same file. However you need to watch out! Imagine a case where two people, Austin and Kalee, both are working on the model for Grendel. Austin is hard at work modeling Grendel's arms; it has taken him hours. Kalee has checked out Grendel's model as well to check on it's progress. Since Austin hasn't published his changes yet Kalee has an old version. She notices that Grendel's eyes are backwards and in a couple of seconds she fixes them. Austin finishes his changes and publish. Moments later Kalee publishes her changes, but her version doesn't include Austin's changes. There is no way to merge the changes, so the pipeline will use the model that was published most recently, in this case Kalee's version that has the eyes the right way but has the wrong arms. So make sure that you are communicating will all the people that are working on your asset.
@@ -152,13 +161,15 @@
 				<p>Now in the case of Austin and Kalee it is likely that they would actually want to use Austin's version and just apply Kalee's quick changes to it. Thankfully there is a way to revert a production model to a previous version, rollback!</p>
 				<h4>Rollback</h4>
 				<p>When you publish an asset the pipeline will keep track of the history of that item. So at anytime if you need to revert to a previous version of the asset you can rollback the changes.</p>
-				<img src = "images/screenshots/rollback.png"/>
+				<img src="images/screenshots/rollback.png"/>
 				<p>In the case of Kalee and Austin (discussed in the Checkout section), we see that Austin needs to restore his version. He would scroll through the revision history and find his version. If he doesn't remember the exact time of his publish he can look in the comment section for the descriptive comment that he wrote when he published it. Then he can rollback to his version, re-do Kalee's changes and republish.</p>
+
+				<h4>Naming Conventions</h4>
+				<p>You will find that there are a lot of names that end in "_main" and folders that are called "main." Why is this? The idea is that at some point you might want to have different variations of the same asset. For example in Taijitu we had the regular or main Ten and then we also had Dream Ten that had the same model and rig but had a different shader. So the idea is that you would have ten_texture_main and ten_texture_dream and those textures would be stored in /groups/dusk/production/assets/ten/texture/main/ten-skin.tex and /groups/dusk/production/assets/ten/texture/dream/ten-skin.tex. At the time of writing this there is no software that leverages this file structure of naming convention, at least not to my knowledge. In the future we might so we will just leave the folder structure and naming convention in the hope that one day we might support that.</p>
 
 				<a id="life-of-an-asset-anchor"></a>
 				<h3>The Life of a Pipeline Asset</h3>
 				<p>Now let's see these in context of the life of an asset:</p>
-				<!--TODO: Fill in all the missing pieces in the life span of an asset. Use the information Kalee gave in slack-->
 				<ol>
 					<li>
 						Story artists take the story concept and draw each acting moment and scene in the film.
@@ -174,16 +185,17 @@
 					<li>Riggers use the model to create all the necessary rigs in Maya and use the publish tool to save the rig to the asset.</li>
 					<li>Set dressers will bring all the models from each set together and arrange and size them to fit properly in the set. They will them use the publish tool to save the set to the pipeline as a set.
 					<li>Pre vis artists use the rigs and models to create a rough 3D outline of the film. Pre vis artist will layout the basic timing, positions, and camera motion for each shot in Maya and use the publish tool to save the layout to the shot.</li>
-					<li>Animators will use the pre vis layouts to inform thier animation. They will animate all of the characters and props in Maya and use the publish tool to save the animation to the shot.</li>
+					<li>Animators will use the pre vis layouts to inform their animation. They will animate all of the characters and props in Maya and use the publish tool to save the animation to the shot.</li>
 					<li>Shaders will create textures for the the asset in Mari and publish the textures to the proper asset.</li>
 					<li>Each asset will be assembled in Houdini using the models and textures created earlier and publish it as the assembly part of the asset. Each assembly has the the shader, set placement, and animation built into it.</li>
 					<li>Lighters will bring in the all of the assemblies for each shot and add lights to the set to create the appropriate mood for the shot.</li>
 					<li>Render Wranglers will brake the assets in the shot into layers and render each shot.</li>
 					<li>Compositors will bring the renders from Houdini into Nuke, add composite each shot to make sure that the film has a unified polished look. Then they will publish the composition to the shot</li>
 					<li>Editors will bring the composites of each shot together and join it with music and foley to create the final product.</li>
-					<li>Critcs at the Television Academy will then watch the film. Decide it is the best short film that they have ever seen and award BYU with a Student Emmy for it's wonderful animated film.</li>
+					<li>Critics at the Television Academy will then watch the film, decide it is the best short film that they have ever seen, and award BYU with a Student Emmy for it's wonderful animated film.</li>
 				</ol>
-				<p>It's that easy.</p>
+				<p>It's that easy*.</p>
+				<p><strong>*Note:</strong>Just keep in mind that at almost any point you can go back to a previous point and then move forward again only to jump back to revisit a different point etc.</p>
 				<p>That is the general overview of the pipeline and what it is doing. Now we will move on to the different tools in the various software.</p>
 			</div>
 		</div>
@@ -209,6 +221,14 @@
 
 				<h3><img class="icon" src="images/icons/publish-icon.png"> Publish</h3>
 				<p>The publish button will allow you to upload your model or scene's progress to the pipeline so that others can access it. After checking out a model or scene, you can modify it then publish it back out. Once your asset is published, you should be able to check it out any time you or someone else needs it. Your publishes will replace the previous publishes but it will not overwrite them. This allows you return to a previous version with a rollback (see further down below).</p>
+				<p><strong>Important: </strong> before you publish an asset make sure you are following these conventions:
+					<ul>
+						<li>Geo is properly named. There should be no "polysurface87" in the Outliner. If each piece of geo doesn't have a descriptive name then it will very hard for shaders to know what textures to assign to which geo later on.</li>
+						<li>Make sure that there is as little geo as possible. If the geo is going to use the same texture as another geo in the model you should consider joining them into one mesh. This will make it easier for the shaders to shade and it will make it easier for Houdini to load in and group the asset</li>
+						<li>Make sure that all the geo is grouped into one parent group. Beneath that group there can be any number of groups that you want but all of those groups and meshes need to be contained in one group. Otherwise the sets that reference that asset are going to very cluttered and the alembic export my not export your asset correctly.</li>
+						<li>Make sure you freeze transformations and delete history.</li>
+					</ul>
+				</p>
 				<img src="images/screenshots/publish.png">
 
 				<h3><img class="icon" src="images/icons/set-frame-range-icon.png"> Set Current Frame Range</h3>
@@ -221,11 +241,10 @@
 				<p>An alembic is essentially an .obj file for animated objects. It will export your animation into a format that other packages like Houdini can read. Uploading an alembic to the pipe is a way to backup your file and keep the animation safe even if your animation file explodes, but keep in mind that uploading alembics constantly will slow down the pipe for everyone if it becomes too full of files. We recommend that you export your alembic to the pipe either when you are finished with your animation or reach a major checkpoint. (You may export your animation as an alembic to your local drive (using Maya's built in exporter) as often as you want though.)</p>
 
 				<h3><img class="icon" src="images/icons/tag-icon.png"> Tag Selected Objects for Export</h3>
-				<p>When you are animating a scene, you will probably have your character(s) walking through a set or environment that you aren't necessarily animating. When you tag objects for export, you are telling the computer which objects you DID animate so it knows which ones to export as an alembic. You only have to do this once per scene.
-				To do this, select all your animated objects then click the button. Be sure to only select objects that you've animated (including characters, props, and moving objects).</p>
+				<p>There are a lot of parts of a character that should not be included in an alembic. For example, the rig controls for a character should be left out and only the deformed mesh should be included in the export, or simulation meshes for cloth should not be included but the high res hero cloth that deforms to that simulation mesh should be included. Use the tag tool to mark the geometry that needs to be exported and then when the Export as Alembic tool is run it will only export the tagged geo. You should only ever need to tag an item once. Therefore you should tag it as early in the process as possible. For a model you could tag it when you are rigging it. Tag the geo and then any time the rig is referenced it will still have those tags.</p>
 
 				<h3><img class="icon" src="images/icons/untag-icon.png"> Untag Selected Objects for Export</h3>
-				<p>If you want to change which objects are exporting as an alembic, you can select the objects you want to exclude and click this button. You only have to do this once. And since objects are untagged by default, you should only have to do it to objects that have been tagged previously.</p>
+				<p>If you tag something that should not be tagged or for any other reason you need to untag something then you can untag it with this tool. Since objects are untagged by default, you should only have to do it to objects that have been tagged previously.</p>
 
 				<h3><img class="icon" src="images/icons/reference-icon.png"> Reference a Model or Rig</h3>
 				<img src="images/screenshots/reference.png">
@@ -240,7 +259,11 @@
 				<p>Need to blow something up or set it on fire? Have we got the gnome for you! This is kind of like Myth Buster's "Buster" test dummy except a garden gnome and also virtual. Have fun, go play with scissors and fire on us.</p>
 
 				<h3><img class="icon" src="images/icons/static-export-icon.png"> Export as Static Alembic</h3>
-				<p>Normally a static version of each asset is exported to an alembic when you publish. Should you ever meet a case where you need to reexport the static alembic for an asset but you haven't made any changes that need to be publihsed (sometimes, though rarely, the Houdini tools may prompt you to do so) then you can just checkout the asset and press this button to create the satic alembic export.</p>
+				<p>Normally a static version of each asset is exported to an alembic when you publish. Should you ever meet a case where you need to re-export the static alembic for an asset but you haven't made any changes that need to be published (sometimes, though rarely, the Houdini tools may prompt you to do so) then you can just checkout the asset and press this button to create the static alembic export.</p>
+
+				<h3><img class="icon" src="images/icons/reload-script-icon.png"> IK FK Snapping</h3>
+				<p>The IK FK Snapping Tool allows you to match an IK limb of a rig to the corresponding FK limb. When you click on the tools you will see a small window that will allow you to select the character, limb, and side to snap. Then you click on the mode you want switch to.</p>
+				<img src="images/screenshots/maya-ik-fk-snapping.png">
 
 				<h3><img class="icon" src="images/icons/reload-script-icon.png"> Reload Tools Scripts</h3>
 				<p>If you have made changes to the code that runs any of these buttons then you can use the Reload Tools Scripts tool to reload the scripts without having to restart maya. You can find more information about this in the <a href="#advanced-anchor">Advanced section</a>.</p>
@@ -252,66 +275,147 @@
 				<p>To rollback an element first check it out. Then click the rollback button. A window will come up that will list all of the previous publishes for that element. Click on the publish that you want to go back to and click "Rollback." Maya will essentially recall the file from that past publish and republish it so it becomes the current publish (<strong>*Note:</strong> In the list of publishes this publish will now occur twice, once when it was originally published and again when it was rolled back). It will load publish into Maya and you can then start working on it.</p>
 			</div>
 		</div>
-		<div class="row" id="houdini">
+		<div class="section" id="houdini">
 			<a id="houdini-anchor"></a>
-			<div class="twelve columns">
-				<a name="houdini"></a>
-				<h2>Houdini</h2>
-				<p>For our production, we use Houdini for shading, lighting, rendering, and most of the FX.</p>
-				<p>Do you remember all of those neat things you learned back in the Maya section? Well, throw them out. They only partially relate to the Houdini pipeline tools and having them tightly coupled in your mind will lead to errors.</p>
-				<p>Let's take a look at Houdini</p>
-				<p>Go ahead and open the film version of Houdini. Now at this point Houdini probably didn't load in the shelf like Maya did. To get there you will need to add it.</p>
-				<img src = "images/screenshots/add-houdini-tools-shelf.png"/>
-				<p>With the tools shelf added in, let's take a look at all of the tools.</p>
-				<img src = "images/screenshots/houdini-tools-shelf.png"/>
-				<h3>Create Body</h3>
-				<p>The create body tool here is actually the exact same as the one in Maya, so about forgetting everything what I mean is don't forget this one.</p>
-				<h3>Assemble Asset</h3>
-				<p>To understand how the checkout and publish buttons are different we first need to understand how the assemble asset tool works.</p>
-				<p>In Houdini the method of adding geometry to a scene is typically by using the tab menu in the Network View. In order to add our geometry to Houdini we first need to make digital assets for them. Once we have we will be able to simply tab in all of our assets into Houdini. The assemble asset tool creates the digital assets for you.</p>
-				<img src = "images/screenshots/assemble-asset.png"/>
-				<p>Find the asset that you want to turn into a digital asset and then click "Assemble." This will load in the alembic that Maya exported when you published it, and turn it into a digital asset. Once the digital asset is created you can add the shaders for the various objects into the digital asset. Once you are pleased with your work, select the digital asset, and then click publish. Now the digital asset is ready for anybody to tab into their scene.</p>
-				<p><strong>Important:</strong> Once the asset is assembled you no longer need to assemble it. You can just tab it in. If you click assemble asset again it will bring in all of the alembics from Maya again but it won't bring in any of the shaders that you created. If someone else has already assembled the asset you will receive a message warning you that the asset has already been assembled. You can assemble it again if you want but you will wipe out any changes that may have been there. If you don't need to assemble it again then you can tab it into the network view without assembling it again.</p>
-				<p>Review
-					<ol>
-						<li>Click assemble asset</li>
-						<li>Click on the asset you wish to assemble</li>
-						<li>
-							Click "Check Out", which should lead you to here:
-							<img src = "images/screenshots/hda.png"/>
-						</li>
-						<li>
-							Add shaders and perform whatever other edits
-							<img src = "images/screenshots/shop-net.png"/>
-						</li>
-						<li>Select the digital asset in the network view</li>
-						<li>Click publish</li>
-					</ol>
-				</p>
-				<p>If you need to make changes to the asset the instructions are a little different:
-					<ol>
-						<li>Tab in the asset</li>
-						<li>Select it in the network view</li>
-						<li>Make the necessary changes</li>
-						<li>Select the digital asset in the network view</li>
-						<li>Click publish</li>
-					</ol>
-				</p>
-				<h3>Checkout</h3>
-				<p>Checkout is a little tricky in Houdini. If nothing is selected in the network view when you click "Check Out" it will think you are trying to check out at shot to work on lighting or fx.</p>
-				<img src = "images/screenshots/houdini-checkout-shot.png"/>
-				<p>If you have an asset selected in the network view then it will think that you are trying to check out that asset. And all you will get is this notification that you did it successfully. If you have something selected that is not an asset then nothing will happen.</p>
-				<img src = "images/screenshots/houdini-checkout-asset.png"/>
-				<h3>Reference</h3>
-				<p>There isn't a reference tool per se but since we are using HDAs you can tab in any asset into Houdini. These act as references that will get updated anytime that the HDA get's updated, But you can also then check out the asset after you have tabbed it in, and then it is no longer a reference but a checked out asset.</p>
-				<h3>Rollback</h3>
-				<p>Rollback works in Houdini similarly to Checkout. If you have an HDA selected then it will allow you to rollback that digital asset. If you have a shot checked out then you will be able to rollback that shot.</p>
-				<h3>Publish</h3>
-				<p>Publish is like Checkout and Rollback. If you have and HDA selected it will publish the HDA. If you don't have anything selected then it will publish a shot. (<strong>*Note:</strong> you can only publish an HDA if you first checked it out.)</p>
-				<h3>Inspire</h3>
-				<p>See also <a href="#maya-inspire-tool">Maya Inspire tool</a>. It's the exact same.</p>
-				<h3>Gnome</h3>
-				<p>This is essentially the same as the Maya Gnomic Test Geo tool but in Houdini it also will load in the gnome's textures!</p>
+			<div class="row">
+				<div class="twelve columns">
+					<a name="houdini"></a>
+					<h2>Houdini</h2>
+					<p>For our production, we use Houdini for shading, lighting, rendering, and most of the FX.</p>
+					<p>Do you remember all of those neat things you learned back in the Maya section? Well, throw them out. They only partially relate to the Houdini pipeline tools and having them tightly coupled in your mind will lead to errors.</p>
+					<p>Let's take a look at Houdini</p>
+					<p>Go ahead and open the film version of Houdini. Now at this point Houdini probably didn't load in the shelf like Maya did. To get there you will need to add it.</p>
+					<img src="images/screenshots/add-houdini-tools-shelf.png"/>
+					<p><strong>Sidenote:</strong> Additionally you can find all the tools in the menus. Just incase you prefer that to a shelf button. Also tools will show up in the menu first because they are easier to add to the menu then they are to add to the shelf. So if you are looking for a BYU tool and it's not on the shelf, check the menu.</p>
+					<img src="images/screenshots/houdini-menu.png"/>
+					<p>With the tools shelf added in, let's take a look at all of the tools.</p>
+					<img src="images/screenshots/houdini-tools-shelf.png"/>
+					<h3>Create Body</h3>
+					<p>The create body tool here is actually the exact same as the one in Maya, so about forgetting everything what I mean is don't forget this one.</p>
+					<h3>Assemble Asset</h3>
+					<p>To understand how the checkout and publish buttons are different we first need to understand how the assemble asset tool works.</p>
+					<p>In Houdini the method of adding geometry to a scene is typically by using the tab menu in the Network View. In order to add our geometry to Houdini we first need to make digital assets for them. Once we have we will be able to simply tab in all of our assets into Houdini. The assemble asset tool creates the digital assets for you.</p>
+					<img src="images/screenshots/assemble-asset.png"/>
+					<p>Find the asset that you want to turn into a digital asset and then click "Assemble." This will load in the alembic that Maya exported when you published it, and turn it into a digital asset. Once the digital asset is created you can add the shaders for the various objects into the digital asset. Once you are pleased with your work, select the digital asset, and then click publish. Now the digital asset is ready for anybody to tab into their scene.</p>
+					<p><strong>Important:</strong> Once the asset is assembled you no longer need to assemble it. You can just tab it in. If you click assemble asset again it will completely rebuild the digital asset, bringing in the alembics from Maya again but it won't bring in any of the shaders that you created. If someone else has already assembled the asset you will receive a message warning you that the asset has already been assembled. You can assemble it again if you want but you will wipe out any changes that may have been there. If you don't need to assemble it again then you can tab it into the network view without assembling it again.</p>
+					<p>If for some reason you do need to reassemble the asset you may find that the <a href="#reassemble-tool-anchor">reassemble tool</a> will do the trick for you without loosing the shader information.</p>
+					<p>Overview
+						<ol>
+							<li>Click assemble asset</li>
+							<li>Click on the asset you wish to assemble</li>
+							<li>
+								Click "Check Out", which should lead you to here:
+								<img src="images/screenshots/houdini-asset-hda.png"/>
+							</li>
+							<li>
+								Add shaders and perform whatever other edits (More details below)
+								<img src="images/screenshots/shop-net.png"/>
+								<p>Here you will notice that there is a subnet called "dont_touch_this_subnet." At the time of creating this tool there was an issue with adding displacement to groups for RenderMan for Houdini. The only thing we could come up with was to break the groups into their own geo nodes and store them into this subnet. However we were able to make the interface the same as if we didn't have to do this work around. So you shouldn't have to touch this subnet at all. If you find yourself tempted to put stuff in it or to edit any of it's parameters you should really consider if there is a different way you can accomplish what you are trying to do.</p>
+							</li>
+							<li>Select the digital asset in the network view</li>
+							<li>Click publish</li>
+						</ol>
+					</p>
+					<p>If you need to make changes to the asset the instructions are a little different:
+						<ol>
+							<li>Tab in the asset</li>
+							<li>Select it in the network view</li>
+							<li>Make the necessary changes</li>
+							<li>Select the digital asset in the network view</li>
+							<li>Click publish</li>
+						</ol>
+					</p>
+					<h4>Building Shaders</h4>
+					<p>Each asset will have it's own shopnet and you should create the shader for each asset within it's own shader so that whoever checks it out can have the shaders with it.</p>
+					<p>Each texture that is exported from Mari using the Tex export will be found here: "/groups/grendel/production/assets/ASSET_NAME/texture/main/cache/TEXTRUE_NAME.tex."</p>
+					<p>When you assign the filename of the texture to the shader make sure that the path uses $JOB. When using Grendini $JOB refers to "/groups/grendel" so the path from above would become "$JOB/production/assets/ASSET_NAME/texture/main/cache/TEXTRUE_NAME.tex."</p>
+					<img src="images/screenshots/houdini-asset-geo-shaders-job.png"/>
+					<h4>Asset Parameters</h4>
+					<p>Once the asset has been assembled and all of the shaders have been created you can assign them to the geometry. In the geo node (Img 1) you will find all the parameters for setting up the shaders. The Material tab (Img 2) will have a set of parameters for each geometry group in the alembic. These groups are based off of the pieces of geometry in Maya. If you have 1000 geos in the outliner you will also have 1000 groups that you are going to have to deal with here. Make sure that the geo is clean and organized in Maya so that it is easy to deal with in Houdini. For each group you can assign the material, the displacement, and the displacement bound.</p>
+					<p><strong>Important:</strong>When you are working on the shaders make sure that the paths to the shaders are relative paths. One way this can be achieved is in the operator selector (Img 7) make sure you have "Export Relative Path" checked before you click accept.</p>
+					<img src="images/screenshots/houdini-asset-geo-shaders-relative-path.png"/><p class="caption">Img 1</p>
+					<p>The RenderMan tab (Img 3) in the geo parameters will have several RenderMan settings such as "Render Polygons as Subdivisions" and "Interpolate Boundary." If there are other RenderMan parameters that would be good to include here let us know and we can add it.</p>
+					<p>If the geometry hasn't loaded you can try going to the Troubleshooting tab (Img 4) and click the "Refresh" button. This will try and reload the geometry from the alembic. If it still doesn't work feel free to poke around any of the nodes and see if you can find the problem. If all else fails just find a Pipeline technician to help fix the problem.</p>
+				</div>
+				<div class="row">
+					<div class="three columns"><img src="images/screenshots/houdini-asset-geo-selected.png"/><p class="caption">Img 2</p></div>
+					<div class="three columns"><img src="images/screenshots/houdini-asset-geo-shaders.png"/><p class="caption">Img 3</p></div>
+					<div class="three columns"><img src="images/screenshots/houdini-asset-geo-renderman.png"/><p class="caption">Img 4</p></div>
+					<div class="three columns"><img src="images/screenshots/houdini-asset-geo-troubleshooting.png"/><p class="caption">Img 5</p></div>
+				</div>
+				<div class="row">
+					<div class="twelve columns">
+						<p>There are also some new parameters on the digital asset (Img 5). In the Grendel tab (Img 6-8) there are options for loading different versions of the asset. These versions can be selected from the "Source Menu" in the Grendel Tab.</p>
+						<p>First, the Object Space (Img 6) option will load the geometry as it was modeled in Maya.</p>
+						<p>The Set Space option (Img 7) allows you to select a set in the film and if this asset appears in that set if will load the translation, rotation, and scale of this asset so it will fit into that set. The set can be selected from the set menu that will appear if the source is set to "Set."</p>
+						<p>The Shot Space option (Img 8) will load in any shot specific animation for this asset. If in the shot the asset remains static then you can leave the source set to Set Space. However if the asset moves then you can select the shot and the tool will load in the dynamic alembic for that specific shot.</p>
+						<p>Additionally there is a hide toggle that will allow you to hide or show the asset and a "Reload" button that is just the "Refresh" button from above that has been promoted up to the HDA level for your convenience.</p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="three columns"><img src="images/screenshots/houdini-asset-selected.png"/><p class="caption">Img 6</p></div>
+					<div class="three columns"><img src="images/screenshots/houdini-asset-object-space.png"/><p class="caption">Img 7</p></div>
+					<div class="three columns"><img src="images/screenshots/houdini-asset-set.png"/><p class="caption">Img 8</p></div>
+					<div class="three columns"><img src="images/screenshots/houdini-asset-shot.png"/><p class="caption">Img 9</p></div>
+				</div>
+
+				<div class="row">
+					<div class="twelve columns">
+						<h4>Assembling a Set</h4>
+						<p>Since a set is a bunch of assets put together the assembly process for a set is a little different. Instead of loading in alembics directly from the set in Maya the assembler will instead load in all of the HDAs for all of the assets that are in that set. It will then promote many of the options discussed above to a parent HDA that represents the set.</p>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="twelve columns">
+						<div class="six columns"><img src="images/screenshots/houdini-set-hda.png"/><p class="caption">Img 1</p></div>
+						<div class="six columns"><img src="images/screenshots/houdini-set-insides.png"/><p class="caption">Img 2</p></div>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="twelve columns">
+						<div class="six columns"><img src="images/screenshots/houdini-set-parms.png"/><p class="caption">Img 3</p></div>
+						<div class="six columns">
+							<p>Sets also have a different set of parameters. In the "Set Options" you will find controls to set set the shot for any animation that takes place on the items in that set. You will also find two checkboxes for each item in the set: "Hide" and "Animated". If the Hide box is checked the asset in the set will be hid. If the Animated box is checked then instead of using the typical static geo for the set the animated alembic will be used for the shot specified in the shot folder.</p>
+							<p>All of the shaders should be hooked up on each of the assets in the set so once it is assembled you shouldn't have to do much to it. However you might find it useful to organize the assets in the set into several tabs (as seen in image 3) so that it is easier to find them.</p>
+							<p>Additionally if any of the assets in the set have any custom controls you may want to promote them to the set HDA so you can access those controls without needing to unlock the set HDA.</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="row">
+					<a id="reassemble-tool-anchor"></a>
+					<div class="twelve columns">
+						<h4>Reassembling an Asset</h4>
+						<p>There may be times when you will need to reassemble an asset. This might be because the parameter interface for the assets has changed and it needs to be updated. Or maybe the names of groups and geo changed so much that they don't show up anymore. If the changes are small enough it might be easier to do them by hand. But if the changes are very extensive then the reassemble tool might be the tool for you!</p>
+						<p><strong>WARNING!:</strong> The reassemble tool is going to delete all geo nodes in the HDA. Make sure that anything you want to preserve is stored in a subnet or an HDA tool. Maybe make a copy of it just in case.</p>
+					</div>
+				</div>
+
+				<div class="row">
+					<h3>Checkout</h3>
+					<p>Checkout is a little tricky in Houdini because there are three different things you can checkout (Assets, Shots, and Tools) and they all get checked out a little differently.</p>
+					<p>For Assets and Tools you only need to check them out if you are going to edit them. If you only need to use them in the shot then you can just tab them in. If you do need to checkout an asset or a tool you just tab in the HDA for the Asset or Tool, right click on it, and click checkout.</p>
+					<img src="images/screenshots/houdini-asset-checkout.png"/>
+					<p>It will unlock the node and give you the following confirmation.</p>
+					<img src="images/screenshots/houdini-checkout-asset.png"/>
+					<p>For shots you can checkout either a lighting scene or an effects scene. Just use the "Checkout Shot" tool in the tool shelf, select the shot you want to work on from either the lighting or fx tab, and click checkout.</p>
+					<p><strong>Sidenote:</strong> As you were looking in the shelf you probably noticed that there is also a "Checkout Tool" and "Checkout Asset" buttons as well. You can use these if you want but you are going to have to make sure that you select the node that you want to checkout in the network view and then click checkout.</p>
+					<img src="images/screenshots/houdini-checkout-shot.png"/>
+					<h3>Reference</h3>
+					<p>There isn't a reference tool per se but since we are using HDAs you can tab in any asset into Houdini. These act as references that will get updated anytime that the HDA get's updated, But you can also then check out the asset after you have tabbed it in, and then it is no longer a reference but a checked out asset.</p>
+					<h3>Rollback</h3>
+					<p>Rollback works in Houdini similarly to Checkout. If you want to rollback and Tool or Asset just tab it into the network view right click and click Rollback. If you have a shot checked out then you can use the "Rollback Shot" tool to rollback that shot. From there it's the same as any other rollback.</p>
+					<h3>Publish</h3>
+					<p>Publish is like Checkout and Rollback. (<strong>*Note:</strong> you can only publish an HDA if you first checked it out. In the context menu the option to publish the asset will only show up if you had previously checked out the asset.)</p>
+					<img src="images/screenshots/houdini-asset-publish.png"/>
+					<p>When the publish window comes up, make sure the right asset, or shot is selected, write a publish message descripting what you changed, and click publish.</p>
+					<h3>Inspire</h3>
+					<p>See also <a href="#maya-inspire-tool">Maya Inspire tool</a>. It's the exact same.</p>
+					<h3>Gnome</h3>
+					<p>This is essentially the same as the Maya Gnomic Test Geo tool but in Houdini it also will load in the gnome's textures!</p>
+				</div>
 			</div>
 		</div>
 		<div class="row" id="mari">
@@ -326,9 +430,9 @@
 				<h3>Publish</h3>
 				<p>We currently don't support publishing in Mari but in the future Mari will be able to export a Mari archive of your project into the pipeline so that others can have access to you project. Keep an eye open for this new tool!</p>
 				<h3>Export Tex</h3>
-				<p>You can export .tex files easily with the Export Tex tool. Select the geo or channel you with to export textures for and then click the corresponding Export Option (All, Selected Geo, or Selected Channel). If you used the Import Geo tool then Mari will already know where to export the textures to. If you brought the geo in by yourself (because you started working on it before this tool was made) then it will prompt you to select the asset to which the texture belongs. If you need to get to the texture it can be found in /groups/grendel/production/assets/ASSET_NAME/texture/main/cache/.</p>
+				<p>You can export .tex files easily with the Export Tex tool. Select the geo or channel you wish to export textures for and then click the corresponding Export Option (All, Selected Geo, or Selected Channel). If you used the Import Geo tool then Mari will already know where to export the textures to. If you brought the geo in by yourself (because you started working on it before this tool was made) then it will prompt you to select the asset to which the texture belongs. If you need to get to the texture it can be found in /groups/grendel/production/assets/ASSET_NAME/texture/main/cache/.</p>
 				<p>In the future we will probably be able to make Houdini bring them in automatically for you but until the future has arrived you are going to have to get those manually. Thank you for your patience!</p>
-				<img src = "images/screenshots/mari-tools-menu.png"/>
+				<img src="images/screenshots/mari-tools-menu.png"/>
 				<h3>Inspire</h3>
 				<p>See also <a href="#maya-inspire-tool">Maya Inspire tool</a>. It's the exact same.</p>
 			</div>
@@ -388,9 +492,10 @@
 						<li>Click Save</li>
 					</ol>
 				</p>
-				<h3>Where Do File Go When I Check Them Out</h3>
+				<h3>Where Do Files Go When I Check Them Out</h3>
 				<p>When you check out a file the pipeline tools make a copy of the production file for you to work on. This file is yours and you can edit it as you wish without worrying about messing up the production assets.</p>
 				<img src="images/screenshots/users-folder.png">
+				<p>Since they are part of the film they can be saved in the groups folder and it won't count against your quota!</p>
 			</div>
 		</div>
 		<div class="row" id="glossary">

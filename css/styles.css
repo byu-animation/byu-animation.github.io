@@ -61,3 +61,8 @@ img.icon {
 .row {
 	margin-bottom: 20px;
 }
+
+.caption {
+	text-align: center;
+	font-variant: small-caps;
+}
