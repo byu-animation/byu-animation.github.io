@@ -84,12 +84,18 @@
 
 				<a id="preface-anchor"></a>
 				<h3>Preface</h3>
-				<p>The very first thing you need to understand about pipelines is that it acts like a library. You go to the library, find the book you want, check it out, read it, then return it to the library. The pipeline works the same way: you go to the pipe, check out the scene you want, change it*, then return it to the pipeline. That way, people can keep checking out the most updated scene and not do work over again that has already been done.</p>
-				<p>*<strong>*Note:</strong> In that sense it's nothing like a library because typically you should return books to the library in the same condition in which you got it. And in this case you are returning it to the library better than when you picked it up. As a matter of fact there are lots of differences between the pipeline and a library. And we are about to look at another difference here it a bit. So don't hold onto that too tightly analogy.</p>
-				<p>One important difference between the pipeline and a library is that multiple people can check out the same item. This is so that when Mike is working on something Brennan can still check it out and do tests on it or show it off to someone instead of Mike having a monopoly on the model.</p>
-				<p>As we move forward though these instructions please note that every time you see the word Grendel you can replace it with the name of your film, Every time you see the word Grendaya, Grendini, etc, replace it with "TheNameOfYourFilmaya, TheNameOfYourFilmini etc. But for the sake of brevity (and for the sake of our ego) we will just use Grendel, Grendaya, Grendini etc.</p>
-				<p>For fun and to help distinguish between the regular Maya and the Maya that has all of the BYU pipeline tools loaded in, we have renamed it and all the other software you will be using. Maya becomes Grendaya, Houdini becomes Grendini etc.</p>
-				<p>From what I understand "the pipeline" technically refers to the process by which the film is created from concept to storyboard to animation to editing to the end. The "pipeline tools" only touch a small section of all of the work that goes into the pipeline. However in this document you may see "pipeline" and "pipeline tools" used interchangeably. In this case they both typically refer to the "pipeline tools." Just be aware of that as we move forward and you should be able to distinguish the when pipeline refers to pipeline and when it refers to pipeline tools.</p>
+				<h4>What is "The Pipeline"</h4>
+				<p>"The Pipeline" refers to the process by which the film is created. This process goes from concept to storyboard to animation to editing to the end. If an asset is in the pipeline then that means that it was entered into the flow of the film, so the pipeline can also refer to the collection of assets that make up the film. The "pipeline tools" are all of the softwares that keeps track of all of the assets in the pipeline. Since the pipeline and the pipeline tools are so deeply connected, in this document (and in talking about filmmaking) you may see "pipeline" and "pipeline tools" used interchangeably. Just be aware of that as we move forward and you should be able to distinguish the when "pipeline" refers to The Pipeline and when it refers to pipeline tools.</p>
+
+				<h4>The Pipeline is Like an Enormous Library</h4>
+				<p>It only works if all the little books mesh together.</p>
+				<p>A helpful analogy is to think of the pipeline like a library. You go to the library, find the book you want, check it out, read it, then return it to the library. The pipeline works the same way: you go to the pipe, check out the scene you want, change it*, then return it to the pipeline. That way, people can checkout the most updated scene and not worry about using outdated assets or duplicating work.</p>
+				<p><strong>*Note:</strong> In that sense it's nothing like a library because you return books to the library without editing them. In this case it's as if you are returning your asset to the pipeline-library better than when you picked it up. As a matter of fact there are lots of differences between the pipeline and a library, so don't hold onto to that analogy too tightly.</p>
+				<p>One important difference between the pipeline and a library is that multiple people can check out the same item at the same time. This is so that when Mike is working on a model Brennan can still check it out and do tests on it or show it off to someone instead of Mike having a monopoly on the model.</p>
+
+				<h4>A Word About Loosely Coupled Documentation</h4>
+				<p>In an ideal world I might be able to write this documentation to be not so tightly coupled to the current years film. In other words it would say things like "your film" or "the current film" instead of "Gendel." However it can be fairly difficult to do so and not be feel overly wordy. As we move forward though these instructions please note that every time you see the word Grendel, you can replace it with the name of your film, Every time you see the word Grendaya, Grendini, etc, replace it with "TheNameOfYourFilmaya, TheNameOfYourFilmini etc. But for the sake of brevity (and for the sake of our egos) we will just use Grendel, Grendaya, Grendini etc.</p>
+				<p>Also note that for fun and to help distinguish between the regular Maya and the Maya that has all of the BYU pipeline tools loaded in, we have renamed it and all the other software you will be using. Maya becomes Grendaya, Houdini becomes Grendini, etc.</p>
 
 				<a id="getting-access-anchor"></a>
 				<h3>Getting Access to the Pipeline Tools</h3>
@@ -118,7 +124,7 @@
 						<a href="#asset-def">Assets</a> are either props, accessories, sets, or characters. Assets are composed of various <a href="#element-def">elements</a>: <a href="#model-def">models</a>, <a href="#rig-def">rigs</a>, <a href="#texture-def">textures</a>, <a href="#design-def">designs</a>, <a href="#material-def">materials</a>, and <a href="#assebly-def">assemblies</a>.
 						<p>A common misconception is that an asset is the same as a model, however the appropriate relationship (at least as the pipeline tools see it) is to say that an asset has a model, it is a subtle difference and you will likely hear people (even those that are very familiar with the difference) slip up with it all the time. So just keep in mind as you read through this documentation and talk to others that an asset could potentially refer to:
 							<ul>
-								<li>something useful or valuable. Everything that is useful or valuable is an asset.</li>
+								<li>something useful or valuable</li>
 								<li>short for Houdini Digital Asset</li>
 								<li>a model</li>
 								<li>Often it is used in place of body, maybe because the asset is the most common type of body. Or perhaps because "creating a body" sounds stranger than "creating an asset."</li>
@@ -127,7 +133,7 @@
 					</li>
 
 					<li>
-						<a href="#tool-def">Tools</a> refer to the Houdini digital assets (HDA) that have been developed specifically for the film. HDAs can be created to assist in various things while working in Houdini and saving them in the pipeline will allow everybody to have access to these tools. Tools are only composed of one sub element: <a href="#hda-def">HDAs</a>.
+						<a href="#tool-def">Tools</a> refer to the Houdini digital assets (HDAs) that have been developed specifically for the film. HDAs can be created to assist in various things while working in Houdini and saving them in the pipeline will allow everybody to have access to these tools. Tools are only composed of one sub element: <a href="#hda-def">HDAs</a>.
 					</li>
 					<li>
 						<a href="#shot-def">Shots</a> are...well shots I guess. The elements that make a shot are <a href="#animation-def">animations</a>, <a href="#cfx-def">character effects</a>, <a href="#comp-def">compositions</a>, <a href="#fx-def">effects</a>, <a href="#layout-def">layouts</a>, <a href="#lighting-def">lighting</a>, and <a href="#render-def">renders</a>.
@@ -502,14 +508,19 @@
 			<a id="glossary-anchor"></a>
 			<div class="twelve columns">
 				<h2>Glossary</h2>
+				<p>This glossary contains the definitions of these words as they fit into the the pipeline tools. So even if you know the words if might be good to review how the pipeline thinks about them.</p>
 				<ul>
 					<li>
+						<a id="accessory-def"></a>
+						Accessory: Objects that just sit in the set. These objects will likely not be animated.
+					</li>
+					<li>
 						<a id="animation-def"></a>
-						Animation
+						Animation: a shot level element. A Maya file that contains the animation of all the moving objects in a shot.
 					</li>
 					<li>
 						<a id="asset-def"></a>
-						Assets
+						Assets: assets are all of the props, accessories, sets, or characters that are in the film.
 					</li>
 					<li>
 						<a id="body-def"></a>
@@ -517,19 +528,23 @@
 					</li>
 					<li>
 						<a id="cfx-def"></a>
-						Character Effects (CFX)
+						Character Effects (CFX): a shot level element. A Maya file that contains all of the character effects, (ie fur/hair, and cloth)
+					</li>
+					<li>
+						<a id="character-def"></a>
+						Characters: A person or creature in the film.
 					</li>
 					<li>
 						<a id="comp-def"></a>
-						Composition (comp)
+						Composition (comp): a shot level element. A Nuke File that puts together all of the render layers and helps to unify the shots.
 					</li>
 					<li>
-						<a id="design-def"></a>
-						Designs
+						<a id="designs-def"></a>
+						Designs: an asset level element. Any concept art that has been created for an asset. At the time of writing this documentation there is not really a way to bring designs formally into the pipeline so that they are managed by the pipeline tools.
 					</li>
 					<li>
 						<a id="fx-def"></a>
-						Effects (FX)
+						Effects (FX): a shot level element. A Houdini file that contains all of the effects sims for a shot.
 					</li>
 					<li>
 						<a id="element-def"></a>
@@ -541,43 +556,51 @@
 					</li>
 					<li>
 						<a id="hda-def"></a>
-						Houdini Digital Asset (HDA)
+						Houdini Digital Asset (HDA): also called just digital asset. HDAs are the way that SideFX has created to make custom nodes for Houdini that can be shared by a production team.
 					</li>
 					<li>
 						<a id="layout-def"></a>
-						Layouts
+						Layouts (Pre Vis): a shot level element. A Maya file that contains the basic poses for a character, the timing of the shot, the location and settings of the camera, the composition and layout of the shot, and how the shot transitions to the next shot.
 					</li>
 					<li>
 						<a id="lighting-def"></a>
-						Lighting
+						Lighting: a shot level element. A Houdini file that contains all of the assets for a shot, has been lighted, and is ready to be rendered.
 					</li>
 					<li>
 						<a id="material-def"></a>
-						Materials
+						Materials: are the shaders that get assigned to the geometry. Typically the materials are built into the assembly instead of being it's own thing. However there still exists the old file structure for materials to be separate elements. Don't get confused about it. They are just going to be empty folders.
 					</li>
 					<li>
 						<a id="model-def"></a>
-						Models
+						Models: an asset level element. A Maya file that contains all of the geometry for an asset.
+					</li>
+					<li>
+						<a id="prop-def"></a>
+						Prop: Objects that are used by character. These objects will likely be animated.
 					</li>
 					<li>
 						<a id="render-def"></a>
-						Renders
+						Renders: a shot level element. EXR files that are rendered images of each frame of the shot.
 					</li>
 					<li>
 						<a id="rig-def"></a>
-						Rigs
+						Rigs: an asset level element. A Maya file that contains the rig from an asset.
+					</li>
+					<li>
+						<a id="set-def"></a>
+						Sets: Places in the film. These will be made up of props and accessories.
 					</li>
 					<li>
 						<a id="shot-def"></a>
-						Shots
+						Shots: shots are all of the animation, cinematography, composition, effects, etc in a continuous film sequence.
 					</li>
 					<li>
 						<a id="texture-def"></a>
-						Textures
+						Textures: an asset level element. A Mari file that has all of the painted layers of an asset. It could also refer to the exported tiff or tex files.
 					</li>
 					<li>
 						<a id="vis-dev-def"></a>
-						Visual Development (Vis Dev)
+						Visual Development (Vis Dev): see also <a href="#designs-def">Designs</a>. The process of making designs and developing the look and feel of the film.
 					</li>
 				</ul>
 			</div>
