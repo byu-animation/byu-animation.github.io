@@ -437,6 +437,13 @@
 				<img src="images/screenshots/mari-geo-layout.png"/>
 				<p class="caption">Geo heirarcy for the small cabinet. Shelves, jars, etc are all children of the small cabinet.</p>
 
+				<h3>Export Tex</h3>
+				<p>You don't need to wait until you publish to export your textures. You can export .tex files easily with the Export Tex tool. Select the geo or channel you wish to export textures for and then click the corresponding Export Option (All, Selected Geo, or Selected Channel).</p>
+				<img src="images/screenshots/mari-tex-export.png"/>
+				<p>If you used the Import Geo tool then Mari will already know where to export the textures to. If you brought the geo in by yourself (because you started working on it before this tool was made) then it will prompt you to select the asset to which the texture belongs. If you need to get to the texture it can be found in /groups/grendel/production/assets/ASSET_NAME/texture/main/cache/.</p>
+				<img src="images/screenshots/mari-tex-location.png"/>
+				<p>In the future we will probably be able to make Houdini bring them in automatically for you but until the future has arrived you are going to have to get those manually. Thank you for your patience!</p>
+
 				<h3>Checkout</h3>
 				<p>One the surface checkout and publish look the same as they do anywhere else. You pick the the asset you want to checkout and BYU Pipeline Tools will load it into Mari. Then you can publish it and anyone else will be able to open the Mari project and work on it as well.</p>
 				<img src="images/screenshots/mari-checkout.png"/>
@@ -447,17 +454,14 @@
 				<p class="caption">Viking_sword_01 has been checked out twice, so in the projects list we have viking_sword01 and viking_sword01(2)</p>
 
 				<h3>Publish</h3>
-				<p>Publish works the same as usual with the caveat that we discussed in the checkout section. When you publish it will archive your project and save it into the pipe. You are then free to delete it from your projects. In fact the publish tool can do it for you if you want. It will give you the option to delete the project all you have to do is say yes. Or no if you are the paranoid type.</p>
+				<p>Publish works the same as usual with the caveat that we discussed in the checkout section. When you publish it will archive your project and save it into the pipe. You are then free to delete it from your projects. In fact the publish tool can do it for you if you want. It will give you the option to delete the project all you have to do is say yes. Or no if you are the paranoid type or you have additional things you are going to do with the file and you aren't ready to say goodbye yet.</p>
 				<img src="images/screenshots/mari-delete-published-project.png"/>
 				<p class="caption">Published projects can be removed from your projects</p>
 				<p>At this point BYU Pipeline Tools will also export all of the textures for that file, and you are good to move on to the next thing.</p>
 
-				<h3>Export Tex</h3>
-				<p>You don't need to wait until you publish to export your textures. You can export .tex files easily with the Export Tex tool. Select the geo or channel you wish to export textures for and then click the corresponding Export Option (All, Selected Geo, or Selected Channel).</p>
-				<img src="images/screenshots/mari-tex-export.png"/>
-				<p>If you used the Import Geo tool then Mari will already know where to export the textures to. If you brought the geo in by yourself (because you started working on it before this tool was made) then it will prompt you to select the asset to which the texture belongs. If you need to get to the texture it can be found in /groups/grendel/production/assets/ASSET_NAME/texture/main/cache/.</p>
-				<img src="images/screenshots/mari-tex-location.png"/>
-				<p>In the future we will probably be able to make Houdini bring them in automatically for you but until the future has arrived you are going to have to get those manually. Thank you for your patience!</p>
+				<h3>Rollback</h3>
+				<p>Rollback works the same as usual. When you rollback the pipeline tools will copy the archive of the publish you selected and load it Mari. (To make sure everything is clear you are replacing the current version of your project with an old version. Since that old version is replacing the current version the old version becomes the new version and your current version is now the old version.) The new project will take the place of your current project and you will not be able to undo this action. If you think that at any point in the future you are going to need to go back to the old version make sure that you have published it before attempting to rollback.</p>
+
 				<h3>Inspire</h3>
 				<p>See also <a href="#maya-inspire-tool">Maya Inspire tool</a>. It's the exact same.</p>
 			</div>
