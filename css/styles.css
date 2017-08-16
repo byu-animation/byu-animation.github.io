@@ -63,6 +63,7 @@ img.icon {
 }
 
 .caption {
+	font-family: 'Open Sans', sans-serif;
 	text-align: center;
 	font-variant: small-caps;
 }

@@ -428,17 +428,36 @@
 			<a id="mari-anchor"></a>
 			<div class="twelve columns">
 				<h2>Mari</h2>
-				<p>For our production, we use Mari for painting textures. Instead of having a shelf we have a menu. Because it a little easier to make.</p>
-				<h3>Import Geo</h3>
-				<p>First things first is to grab all of the geometry of the asset that you are texturing. Click on Import Geo tool. Select the asset you wish to texture. and Click "Assemble." Mari will bring in all of the alembic files for all of the geometry associated with that assets.</p>
-				<h3>Checkout</h3>
-				<p>At the moment Mari doesn't have the capability to checkout. But soon you will be able to checkout other textures that have been published to the pipeline. Checking out a texture will load in a Mari archive into your local workspace so that you can work at maximum speed.</p>
-				<h3>Publish</h3>
-				<p>We currently don't support publishing in Mari but in the future Mari will be able to export a Mari archive of your project into the pipeline so that others can have access to you project. Keep an eye open for this new tool!</p>
-				<h3>Export Tex</h3>
-				<p>You can export .tex files easily with the Export Tex tool. Select the geo or channel you wish to export textures for and then click the corresponding Export Option (All, Selected Geo, or Selected Channel). If you used the Import Geo tool then Mari will already know where to export the textures to. If you brought the geo in by yourself (because you started working on it before this tool was made) then it will prompt you to select the asset to which the texture belongs. If you need to get to the texture it can be found in /groups/grendel/production/assets/ASSET_NAME/texture/main/cache/.</p>
-				<p>In the future we will probably be able to make Houdini bring them in automatically for you but until the future has arrived you are going to have to get those manually. Thank you for your patience!</p>
+				<p>For our production, we use Mari for painting textures. Instead of having a shelf we have a menu. Because it's a little easier to make.</p>
 				<img src="images/screenshots/mari-tools-menu.png"/>
+				<h3>Create Project from Geo</h3>
+				<p>First things first is to grab all of the geometry of the asset that you are texturing. Click on Create Project from Geo tool, select the asset you wish to texture, and Click "Assemble." Mari will bring in the alembic file for the geometry associated with that assets.</p>
+				<img src="images/screenshots/mari-create-project-from-geo.png"/>
+				<p>The alembic will load into Mari with all of the groups from Maya. This is one of the reasons it's important to make sure that all of the geo is well named, organized, and grouped all under one group.</p>
+				<img src="images/screenshots/mari-geo-layout.png"/>
+				<p class="caption">Geo heirarcy for the small cabinet. Shelves, jars, etc are all children of the small cabinet.</p>
+
+				<h3>Checkout</h3>
+				<p>One the surface checkout and publish look the same as they do anywhere else. You pick the the asset you want to checkout and BYU Pipeline Tools will load it into Mari. Then you can publish it and anyone else will be able to open the Mari project and work on it as well.</p>
+				<img src="images/screenshots/mari-checkout.png"/>
+				<p class="caption">Checkout looks the same as every where else, but it acts differently.</p>
+
+				<p>However there are a couple of weird things that you need to be aware of. Deep down checkout for Mari is a little different because Mari handles projects a little differently. In order to make sure things are running as fast as possible Mari keeps all of your projects in a cache. In order to get them out of the cache and into the pipeline we need to create an archive of the project, and then that archive can be put into the pipeline. Then when you checkout a Mari file the pipeline tools will load the archive from the prodcution folder and extract it into your projects list where you can easily edit it. Where it gets a little weird is that this project will stick around until you delete it. So if you checkout the file again it pull out the production archive and load it again into your project cache and it will create a second version of the asset.</p>
+				<img src="images/screenshots/mari-double-checkout.png"/>
+				<p class="caption">Viking_sword_01 has been checked out twice, so in the projects list we have viking_sword01 and viking_sword01(2)</p>
+
+				<h3>Publish</h3>
+				<p>Publish works the same as usual with the caveat that we discussed in the checkout section. When you publish it will archive your project and save it into the pipe. You are then free to delete it from your projects. In fact the publish tool can do it for you if you want. It will give you the option to delete the project all you have to do is say yes. Or no if you are the paranoid type.</p>
+				<img src="images/screenshots/mari-delete-published-project.png"/>
+				<p class="caption">Published projects can be removed from your projects</p>
+				<p>At this point BYU Pipeline Tools will also export all of the textures for that file, and you are good to move on to the next thing.</p>
+
+				<h3>Export Tex</h3>
+				<p>You don't need to wait until you publish to export your textures. You can export .tex files easily with the Export Tex tool. Select the geo or channel you wish to export textures for and then click the corresponding Export Option (All, Selected Geo, or Selected Channel).</p>
+				<img src="images/screenshots/mari-tex-export.png"/>
+				<p>If you used the Import Geo tool then Mari will already know where to export the textures to. If you brought the geo in by yourself (because you started working on it before this tool was made) then it will prompt you to select the asset to which the texture belongs. If you need to get to the texture it can be found in /groups/grendel/production/assets/ASSET_NAME/texture/main/cache/.</p>
+				<img src="images/screenshots/mari-tex-location.png"/>
+				<p>In the future we will probably be able to make Houdini bring them in automatically for you but until the future has arrived you are going to have to get those manually. Thank you for your patience!</p>
 				<h3>Inspire</h3>
 				<p>See also <a href="#maya-inspire-tool">Maya Inspire tool</a>. It's the exact same.</p>
 			</div>
