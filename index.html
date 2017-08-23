@@ -213,7 +213,7 @@
 				<p>To access the pipeline, open up Grendaya and look at the row of tabs at the very top. Click the tool shelf tab on the furthest right labeled "Grendel".</p>
 				<img src="images/screenshots/maya-tools-shelf.png">
 
-				<h3><img class="icon" src="images/icons/checkout-icon.png"> Checkout</h3>
+				<h3><img class="icon" src="images/icons/checkout.svg"> Checkout</h3>
 				<p>The checkout button is exactly what it sounds like: you use it to check out, or access, previously worked on scenes or models. When you click it, a window will come up and you will notice that there are 5 tabs: model, rig, layout, anim, and cfx.</p>
 				<img src="images/screenshots/checkout.png">
 				<p>If you are a modeler, you'll find the model you want to check out; if you're an animator, you'll find the scene you need to check out; If you're a CFX (character FX) artist you'll need to check out the cfx scene, etc.</p>
@@ -221,11 +221,11 @@
 				<p>However if you notice that Eric has been working on Beowulf constantly for several days and the last publish was a week ago it may be that Eric is still working on some changes and has not published them yet. Make sure you communicate with those that are working on the same body as you so that you can avoid duplicating work. Our checkout-publish system allows multiple people to check out an asset or shot at the same time so that none of the bodies are locked down. However with this power comes great responsibility! Make sure you are a good communicator!</p>
 				<p>Another possibility is that you see "No publishes for this element." That means there is nothing for you to check out. First you must model the asset or create a rig or setup the shot locally and then publish it to the pipeline.</p>
 
-				<h3><img class="icon" src="images/icons/create-body-icon.png"> Create Body</h3>
+				<h3><img class="icon" src="images/icons/new-body.svg"> Create Body</h3>
 				<img src="images/screenshots/body-creation.png">
 				<p>As discussed in the basic overview section, creating a body will add a new asset, tool, or shot to the project. After the body is created you will then be able to publish and check out it's various parts. When you click this button, a window will come up that has three tabs, "Asset", "Tool" and "Shot". If you are making a new asset, you will name it under the asset tab, and so forth. Following proper naming conventions (that have been established by those in charge of the film), type in the name of the asset or shot and then click "Ok." The body is now added to the project and is ready to receive its first publish!</p>
 
-				<h3><img class="icon" src="images/icons/publish-icon.png"> Publish</h3>
+				<h3><img class="icon" src="images/icons/publish.svg"> Publish</h3>
 				<p>The publish button will allow you to upload your model or scene's progress to the pipeline so that others can access it. After checking out a model or scene, you can modify it then publish it back out. Once your asset is published, you should be able to check it out any time you or someone else needs it. Your publishes will replace the previous publishes but it will not overwrite them. This allows you return to a previous version with a rollback (see further down below).</p>
 				<p><strong>Important: </strong> before you publish an asset make sure you are following these conventions:
 					<ul>
@@ -237,44 +237,46 @@
 				</p>
 				<img src="images/screenshots/publish.png">
 
-				<h3><img class="icon" src="images/icons/set-frame-range-icon.png"> Set Current Frame Range</h3>
+				<h3><img class="icon" src="images/icons/frame-range.svg"> Set Current Frame Range</h3>
 				<p>Theoretically, this would read into the Asset Browser app thing that we have and make it easier for you to make the correct frame range on any given animated shot. However, we aren't using the Asset Browser anymore, and this button essentially does nothing. So don't click it.</p>
 
-				<h3><img class="icon" src="images/icons/playblast-icon.png"> Playblast this Shot</h3>
+				<h3><img class="icon" src="images/icons/playblast.svg"> Playblast this Shot</h3>
 				<p>A playblast is essentially making a really low-res, non-shaded render that takes seconds instead of hours. Use this to playback your animation in real time, as playing your animation in the viewport (even in the real-time setting) can be inaccurate.</p>
 
-				<h3><img class="icon" src="images/icons/export-icon.png"> Export as Alembic</h3>
-				<p>An alembic is essentially an .obj file for animated objects. It will export your animation into a format that other packages like Houdini can read. Uploading an alembic to the pipe is a way to backup your file and keep the animation safe even if your animation file explodes, but keep in mind that uploading alembics constantly will slow down the pipe for everyone if it becomes too full of files. We recommend that you export your alembic to the pipe either when you are finished with your animation or reach a major checkpoint. (You may export your animation as an alembic to your local drive (using Maya's built in exporter) as often as you want though.)</p>
+				<h3><img class="icon" src="images/icons/alembic-export.svg"> Export as Alembic</h3>
+				<p>For exporting alembics you have two options. Animated or static.</p>
+				<h4>Animated</h4>
+				<p>An alembic is essentially an .obj file for animated objects and it has a buch of other features too. It will export your animation into a format that other packages like Houdini can read. Uploading an alembic to the pipe is a way to backup your file and keep the animation safe even if your animation file explodes, but keep in mind that uploading alembics constantly will slow down the pipe for everyone if it becomes too full of files. We recommend that you export your alembic to the pipe either when you are finished with your animation or reach a major checkpoint. (You may export your animation as an alembic to your local drive (using Maya's built in exporter) as often as you want though.)</p>
 
-				<h3><img class="icon" src="images/icons/tag-icon.png"> Tag Selected Objects for Export</h3>
+				<h4>Static</h4>
+				<p>Normally a static version of each asset is exported to an alembic when you publish. However should you ever meet a case where you need to re-export the static alembic for an asset but you haven't made any changes that need to be published (sometimes, though rarely, the Houdini tools may prompt you to do so) then you can just checkout the asset and use the static option to create the static alembic export.</p>
+
+				<h3><img class="icon" src="images/icons/tag.svg"> Tag Selected Objects for Export</h3>
 				<p>There are a lot of parts of a character that should not be included in an alembic. For example, the rig controls for a character should be left out and only the deformed mesh should be included in the export, or simulation meshes for cloth should not be included but the high res hero cloth that deforms to that simulation mesh should be included. Use the tag tool to mark the geometry that needs to be exported and then when the Export as Alembic tool is run it will only export the tagged geo. You should only ever need to tag an item once. Therefore you should tag it as early in the process as possible. For a model you could tag it when you are rigging it. Tag the geo and then any time the rig is referenced it will still have those tags.</p>
 
-				<h3><img class="icon" src="images/icons/untag-icon.png"> Untag Selected Objects for Export</h3>
+				<h3><img class="icon" src="images/icons/untag.svg"> Untag Selected Objects for Export</h3>
 				<p>If you tag something that should not be tagged or for any other reason you need to untag something then you can untag it with this tool. Since objects are untagged by default, you should only have to do it to objects that have been tagged previously.</p>
 
-				<h3><img class="icon" src="images/icons/reference-icon.png"> Reference a Model or Rig</h3>
+				<h3><img class="icon" src="images/icons/reference.svg"> Reference a Model or Rig</h3>
 				<img src="images/screenshots/reference.png">
 				<p>A reference is like importing a model or rig into your scene except it pulls from another location and updates as the owner of that file updates it. This is especially important for character rigs as the riggers will continue to polish deformations and your referenced rig will update with those changes. You will need to re-reference your rig(s) every time a change is made to the rig in order to see it in your animation; this will not affect your keyframes.
 				Other notes: You cannot modify a model or rig when it is referenced. Referenced rigs are generally faster and less expensive to run than the real rig itself.</p>
 
-				<h3><img class="icon" src="images/icons/inspire-icon.png"> Inspirational Quote of the Day (AKA the Brent Button)</h3>
+				<h3><img class="icon" src="images/icons/quote.svg"> Inspirational Quote (AKA the Brent Button)</h3>
 				<p>Click to be inspired by your favorite faculty's inspirational quotes. Also submit more quotes to the tool_suggestions channel on Slack.</p>
 
-				<h3><img class="icon" src="images/icons/gnome-icon.png"> Gnomic Test Geo (AKA Summon the Garden Gnome button)</h3>
+				<h3><img class="icon" src="images/icons/gnome.svg"> Gnomic Test Geo (AKA Summon the Garden Gnome button)</h3>
 				<img src="images/screenshots/gnome.png">
 				<p>Need to blow something up or set it on fire? Have we got the gnome for you! This is kind of like Myth Buster's "Buster" test dummy except a garden gnome and also virtual. Have fun, go play with scissors and fire on us.</p>
 
-				<h3><img class="icon" src="images/icons/static-export-icon.png"> Export as Static Alembic</h3>
-				<p>Normally a static version of each asset is exported to an alembic when you publish. Should you ever meet a case where you need to re-export the static alembic for an asset but you haven't made any changes that need to be published (sometimes, though rarely, the Houdini tools may prompt you to do so) then you can just checkout the asset and press this button to create the static alembic export.</p>
-
-				<h3><img class="icon" src="images/icons/reload-script-icon.png"> IK FK Snapping</h3>
+				<h3><img class="icon" src="images/icons/ik-fk.svg"> IK FK Snapping</h3>
 				<p>The IK FK Snapping Tool allows you to match an IK limb of a rig to the corresponding FK limb. When you click on the tools you will see a small window that will allow you to select the character, limb, and side to snap. Then you click on the mode you want switch to.</p>
 				<img src="images/screenshots/maya-ik-fk-snapping.png">
 
-				<h3><img class="icon" src="images/icons/reload-script-icon.png"> Reload Tools Scripts</h3>
+				<h3><img class="icon" src="images/icons/refresh-scripts.svg"> Reload Tools Scripts</h3>
 				<p>If you have made changes to the code that runs any of these buttons then you can use the Reload Tools Scripts tool to reload the scripts without having to restart maya. You can find more information about this in the <a href="#advanced-anchor">Advanced section</a>.</p>
 
-				<h3><img class="icon" src="images/icons/rollback-icon.png"> Rollback Body to Previous Version</h3>
+				<h3><img class="icon" src="images/icons/rollback.svg"> Rollback Body to Previous Version</h3>
 				<p>Occasionally, you might publish a scene or model that for some reason you wish you didn't because the last version was better. Or maybe the current published version has crashed and there's no saving it, so the best bet is to go back in time and reverse the damage.</p>
 				<p>That's what rollback is for! Rollback will take you back to a previous version. To use it, click the element you want to rollback to and click the  date of the version you want.</p>
 				<img src="images/screenshots/rollback.png">
@@ -296,9 +298,11 @@
 					<img src="images/screenshots/houdini-menu.png"/>
 					<p>With the tools shelf added in, let's take a look at all of the tools.</p>
 					<img src="images/screenshots/houdini-tools-shelf.png"/>
-					<h3>Create Body</h3>
+
+					<h3><img class="icon" src="images/icons/new-body.svg"> Create Body</h3>
 					<p>The create body tool here is actually the exact same as the one in Maya, so about forgetting everything what I mean is don't forget this one.</p>
-					<h3>Assemble Asset</h3>
+
+					<h3><img class="icon" src="images/icons/assemble.svg"> Assemble Asset</h3>
 					<p>To understand how the checkout and publish buttons are different we first need to understand how the assemble asset tool works.</p>
 					<p>In Houdini the method of adding geometry to a scene is typically by using the tab menu in the Network View. In order to add our geometry to Houdini we first need to make digital assets for them. Once we have we will be able to simply tab in all of our assets into Houdini. The assemble asset tool creates the digital assets for you.</p>
 					<img src="images/screenshots/assemble-asset.png"/>
@@ -400,7 +404,7 @@
 				</div>
 
 				<div class="row">
-					<h3>Checkout</h3>
+					<h3><img class="icon" src="images/icons/checkout.svg"> Checkout</h3>
 					<p>Checkout is a little tricky in Houdini because there are three different things you can checkout (Assets, Shots, and Tools) and they all get checked out a little differently.</p>
 					<p>For Assets and Tools you only need to check them out if you are going to edit them. If you only need to use them in the shot then you can just tab them in. If you do need to checkout an asset or a tool you just tab in the HDA for the Asset or Tool, right click on it, and click checkout.</p>
 					<img src="images/screenshots/houdini-asset-checkout.png"/>
@@ -409,17 +413,22 @@
 					<p>For shots you can checkout either a lighting scene or an effects scene. Just use the "Checkout Shot" tool in the tool shelf, select the shot you want to work on from either the lighting or fx tab, and click checkout.</p>
 					<p><strong>Sidenote:</strong> As you were looking in the shelf you probably noticed that there is also a "Checkout Tool" and "Checkout Asset" buttons as well. You can use these if you want but you are going to have to make sure that you select the node that you want to checkout in the network view and then click checkout.</p>
 					<img src="images/screenshots/houdini-checkout-shot.png"/>
+
 					<h3>Reference</h3>
 					<p>There isn't a reference tool per se but since we are using HDAs you can tab in any asset into Houdini. These act as references that will get updated anytime that the HDA get's updated, But you can also then check out the asset after you have tabbed it in, and then it is no longer a reference but a checked out asset.</p>
-					<h3>Rollback</h3>
+
+					<h3><img class="icon" src="images/icons/rollback.svg"> Rollback</h3>
 					<p>Rollback works in Houdini similarly to Checkout. If you want to rollback and Tool or Asset just tab it into the network view right click and click Rollback. If you have a shot checked out then you can use the "Rollback Shot" tool to rollback that shot. From there it's the same as any other rollback.</p>
-					<h3>Publish</h3>
+
+					<h3><img class="icon" src="images/icons/publish.svg"> Publish</h3>
 					<p>Publish is like Checkout and Rollback. (<strong>*Note:</strong> you can only publish an HDA if you first checked it out. In the context menu the option to publish the asset will only show up if you had previously checked out the asset.)</p>
 					<img src="images/screenshots/houdini-asset-publish.png"/>
 					<p>When the publish window comes up, make sure the right asset, or shot is selected, write a publish message descripting what you changed, and click publish.</p>
-					<h3>Inspire</h3>
+
+					<h3><img class="icon" src="images/icons/quote.svg"> Inspire</h3>
 					<p>See also <a href="#maya-inspire-tool">Maya Inspire tool</a>. It's the exact same.</p>
-					<h3>Gnome</h3>
+
+					<h3><img class="icon" src="images/icons/gnome.svg"> Gnome</h3>
 					<p>This is essentially the same as the Maya Gnomic Test Geo tool but in Houdini it also will load in the gnome's textures!</p>
 				</div>
 			</div>
@@ -430,21 +439,21 @@
 				<h2>Mari</h2>
 				<p>For our production, we use Mari for painting textures. Instead of having a shelf we have a menu. Because it's a little easier to make.</p>
 				<img src="images/screenshots/mari-tools-menu.png"/>
-				<h3>Create Project from Geo</h3>
+				<h3><img class="icon" src="images/icons/assemble.svg"> Create Project from Geo</h3>
 				<p>First things first is to grab all of the geometry of the asset that you are texturing. Click on Create Project from Geo tool, select the asset you wish to texture, and Click "Assemble." Mari will bring in the alembic file for the geometry associated with that assets.</p>
 				<img src="images/screenshots/mari-create-project-from-geo.png"/>
 				<p>The alembic will load into Mari with all of the groups from Maya. This is one of the reasons it's important to make sure that all of the geo is well named, organized, and grouped all under one group.</p>
 				<img src="images/screenshots/mari-geo-layout.png"/>
 				<p class="caption">Geo heirarcy for the small cabinet. Shelves, jars, etc are all children of the small cabinet.</p>
 
-				<h3>Export Tex</h3>
+				<h3><img class="icon" src="images/icons/renderman.svg"> Export Tex</h3>
 				<p>You don't need to wait until you publish to export your textures. You can export .tex files easily with the Export Tex tool. Select the geo or channel you wish to export textures for and then click the corresponding Export Option (All, Selected Geo, or Selected Channel).</p>
 				<img src="images/screenshots/mari-tex-export.png"/>
 				<p>If you used the Import Geo tool then Mari will already know where to export the textures to. If you brought the geo in by yourself (because you started working on it before this tool was made) then it will prompt you to select the asset to which the texture belongs. If you need to get to the texture it can be found in /groups/grendel/production/assets/ASSET_NAME/texture/main/cache/.</p>
 				<img src="images/screenshots/mari-tex-location.png"/>
 				<p>In the future we will probably be able to make Houdini bring them in automatically for you but until the future has arrived you are going to have to get those manually. Thank you for your patience!</p>
 
-				<h3>Checkout</h3>
+				<h3><img class="icon" src="images/icons/checkout.svg"> Checkout</h3>
 				<p>One the surface checkout and publish look the same as they do anywhere else. You pick the the asset you want to checkout and BYU Pipeline Tools will load it into Mari. Then you can publish it and anyone else will be able to open the Mari project and work on it as well.</p>
 				<img src="images/screenshots/mari-checkout.png"/>
 				<p class="caption">Checkout looks the same as every where else, but it acts differently.</p>
@@ -453,16 +462,16 @@
 				<img src="images/screenshots/mari-double-checkout.png"/>
 				<p class="caption">Viking_sword_01 has been checked out twice, so in the projects list we have viking_sword01 and viking_sword01(2)</p>
 
-				<h3>Publish</h3>
+				<h3><img class="icon" src="images/icons/publish.svg"> Publish</h3>
 				<p>Publish works the same as usual with the caveat that we discussed in the checkout section. When you publish it will archive your project and save it into the pipe. You are then free to delete it from your projects. In fact the publish tool can do it for you if you want. It will give you the option to delete the project all you have to do is say yes. Or no if you are the paranoid type or you have additional things you are going to do with the file and you aren't ready to say goodbye yet.</p>
 				<img src="images/screenshots/mari-delete-published-project.png"/>
 				<p class="caption">Published projects can be removed from your projects</p>
 				<p>At this point BYU Pipeline Tools will also export all of the textures for that file, and you are good to move on to the next thing.</p>
 
-				<h3>Rollback</h3>
+				<h3><img class="icon" src="images/icons/rollback.svg"> Rollback</h3>
 				<p>Rollback works the same as usual. When you rollback the pipeline tools will copy the archive of the publish you selected and load it Mari. (To make sure everything is clear you are replacing the current version of your project with an old version. Since that old version is replacing the current version the old version becomes the new version and your current version is now the old version.) The new project will take the place of your current project and you will not be able to undo this action. If you think that at any point in the future you are going to need to go back to the old version make sure that you have published it before attempting to rollback.</p>
 
-				<h3>Inspire</h3>
+				<h3><img class="icon" src="images/icons/quote.svg"> Inspire</h3>
 				<p>See also <a href="#maya-inspire-tool">Maya Inspire tool</a>. It's the exact same.</p>
 			</div>
 		</div>
@@ -473,12 +482,14 @@
 				<p>For our production, we use Nuke for compositing.</p>
 				<p>The pipeline tools for Nuke are located in the sidebar</p>
 				<img src="images/screenshots/nuke-tools-shelf.png">
-				<h3>Checkout</h3>
+				<h3><img class="icon" src="images/icons/checkout.svg"> Checkout</h3>
 				<p>Nothing weird here! It's just a pretty straight forward checkout process!</p>
-				<h3>Publish</h3>
+				<h3><img class="icon" src="images/icons/publish.svg"> Publish</h3>
 				<p>Nothing weird here! It's just a pretty straight forward publish process!</p>
-				<h3>Rollback</h3>
+				<h3><img class="icon" src="images/icons/rollback.svg"> Rollback</h3>
 				<p>Nothing weird here! It's just a pretty straight forward rollback process!</p>
+				<h3><img class="icon" src="images/icons/auto-comp.svg"> Auto Comp</h3>
+				<p>This tool does a lot of the set up for you. I don't know if it is general purpose or if it has some stuff that was specifically just for Taijitu. Try it and let me know.</p>
 				<h3>The Future</h3>
 				<p>There are many tools that could be made for Nuke but haven't been made or even dreamed of. If you have a vision for an awesome tool for Nuke, let us know if the tools-suggestions channel on slack!</p>
 			</div>
