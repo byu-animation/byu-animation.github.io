@@ -103,7 +103,7 @@
 				<p>In order to have access to the pipeline you need to be a member of "the group". Talk to Seth and he will be able to add you.</p>
 				<p>Once you are part of the group open up a file explorer and navigate to /groups/FILM/byu-pipeline-tools/. FILM will be the name of the group (ie grendel, dusk, etc). This directory is where all of the tools are located.</p>
 				<p>There will be a number of icons, most of which will be some humorous combination of the film name and the software. These icons will launch the software and load all of our custom tools.</p>
-				<img src="images/screenshots/byu-pipeline-tools.png"/>
+				<img src="images/screenshots/general-byu-pipeline-tools.png"/>
 				<p>To add these icons to your desktop:
 					<ol>
 						<li>Right click on the icon</li>
@@ -143,9 +143,9 @@
 				<p><strong>*Note:</strong> For the sake of clarity we will discuss these terms looking at the specific case of the model element of an asset body. But everything should also apply to other elements and other bodies as well.</p>
 				<h4>Body Creation</h4>
 				<p>In order to do anything you need to create a new asset. Assets are usually the first bodies to be created and then shots will be made from assets. Tools will be made as you need them; if you never need them then you will never make them. When you create an asset you will give it a name and the pipeline tools will construct a bunch of folders to store the various elements of the body. For example it will create a model folder that will store the Maya file and the alembic exports for that model. This folder starts out empty but we can fill it by creating the model in Maya and then publishing it to the pipeline.</p>
-				<img src="images/screenshots/body-creation.png"/>
+				<img src="images/screenshots/maya-body-creation.png"/>
 				<p>If you are creating an asset there are four different types of asset that it could be: Set, Prop, Character, and Accessory. When you create an asset it the body creation tool will ask you which type of asset it is.</p>
-				<img src="images/screenshots/body-creation-asset-type.png"/>
+				<img src="images/screenshots/maya-body-creation-asset-type.png"/>
 				<p>It is important that you select the appropriate type at this point because the pipeline will treat the different types very differently. Here are the differences:</p>
 				<ul>
 					<li>Set: Places in the film. These will be made up of props and accessories.</li>
@@ -155,11 +155,11 @@
 				</ul>
 				<h4>Publishing</h4>
 				<p>First up is to make a part of the assets: the model. Once you have created the model you will need to save it into the pipeline. This is called publishing. When an asset is published, the pipeline tools will make a copy of your file and save it into the pipeline. In the case of the model, the pipeline will take your Maya file and make a copy of it to store in the model folder. Once you have published an asset it will be available for anyone to see and use. The way to access a file that someone else has published is through checking out the assets.</p>
-				<img src="images/screenshots/publish.png"/>
+				<img src="images/screenshots/maya-publish.png"/>
 				<p>When you publish an asset make sure that you leave a good comment about the changes that you made. This makes it easy to track important changes on the asset and will become crucial if ever you need to rollback (discussed later).</p>
 				<h4>Checkout</h4>
 				<p>To use an asset you need to check it out. Checking out is the opposite of publishing. When you check out an asset the pipeline tools will create a copy of the production asset and save it to your personal files so that you can work on it. You can make whatever changes you need to it and when you are done you publish the asset again so that everyone can have access to your changes.</p>
-				<img src="images/screenshots/checkout.png"/>
+				<img src="images/screenshots/maya-checkout.png"/>
 				<p>Since the pipeline tools make a personal copy of the file for you, you can modify and save changes as you wish without worrying about changing the production version until you are ready to publish.</p>
 				<p>
 					Multiple people can check out the same asset and work on it at the same time. This is nice because it means that multiple people can look at, do tests on, or work on the the same file. However you need to watch out! Imagine a case where two people, Austin and Kalee, both are working on the model for Grendel. Austin is hard at work modeling Grendel's arms; it has taken him hours. Kalee has checked out Grendel's model as well to check on it's progress. Since Austin hasn't published his changes yet Kalee has an old version. She notices that Grendel's eyes are backwards and in a couple of seconds she fixes them. Austin finishes his changes and publish. Moments later Kalee publishes her changes, but her version doesn't include Austin's changes. There is no way to merge the changes, so the pipeline will use the model that was published most recently, in this case Kalee's version that has the eyes the right way but has the wrong arms. So make sure that you are communicating will all the people that are working on your asset.
@@ -167,7 +167,7 @@
 				<p>Now in the case of Austin and Kalee it is likely that they would actually want to use Austin's version and just apply Kalee's quick changes to it. Thankfully there is a way to revert a production model to a previous version, rollback!</p>
 				<h4>Rollback</h4>
 				<p>When you publish an asset the pipeline will keep track of the history of that item. So at anytime if you need to revert to a previous version of the asset you can rollback the changes.</p>
-				<img src="images/screenshots/rollback.png"/>
+				<img src="images/screenshots/maya-rollback.png"/>
 				<p>In the case of Kalee and Austin (discussed in the Checkout section), we see that Austin needs to restore his version. He would scroll through the revision history and find his version. If he doesn't remember the exact time of his publish he can look in the comment section for the descriptive comment that he wrote when he published it. Then he can rollback to his version, re-do Kalee's changes and republish.</p>
 
 				<h4>Naming Conventions</h4>
@@ -215,14 +215,14 @@
 
 				<h3><img class="icon" src="images/icons/checkout.svg"> Checkout</h3>
 				<p>The checkout button is exactly what it sounds like: you use it to check out, or access, previously worked on scenes or models. When you click it, a window will come up and you will notice that there are 5 tabs: model, rig, layout, anim, and cfx.</p>
-				<img src="images/screenshots/checkout.png">
+				<img src="images/screenshots/maya-checkout.png">
 				<p>If you are a modeler, you'll find the model you want to check out; if you're an animator, you'll find the scene you need to check out; If you're a CFX (character FX) artist you'll need to check out the cfx scene, etc.</p>
 				<p>In the list of assets or shots select the body you want to work on. Notice the box to the right of the list. This box will give you information about the current state of the body: who was the last person to work on it, when was the last time the body was changed, and what things were changed. If everything looks in order, click "Check Out" and Maya will load the file and you will be able to work on it.</p>
 				<p>However if you notice that Eric has been working on Beowulf constantly for several days and the last publish was a week ago it may be that Eric is still working on some changes and has not published them yet. Make sure you communicate with those that are working on the same body as you so that you can avoid duplicating work. Our checkout-publish system allows multiple people to check out an asset or shot at the same time so that none of the bodies are locked down. However with this power comes great responsibility! Make sure you are a good communicator!</p>
 				<p>Another possibility is that you see "No publishes for this element." That means there is nothing for you to check out. First you must model the asset or create a rig or setup the shot locally and then publish it to the pipeline.</p>
 
 				<h3><img class="icon" src="images/icons/new-body.svg"> Create Body</h3>
-				<img src="images/screenshots/body-creation.png">
+				<img src="images/screenshots/maya-body-creation.png">
 				<p>As discussed in the basic overview section, creating a body will add a new asset, tool, or shot to the project. After the body is created you will then be able to publish and check out it's various parts. When you click this button, a window will come up that has three tabs, "Asset", "Tool" and "Shot". If you are making a new asset, you will name it under the asset tab, and so forth. Following proper naming conventions (that have been established by those in charge of the film), type in the name of the asset or shot and then click "Ok." The body is now added to the project and is ready to receive its first publish!</p>
 
 				<h3><img class="icon" src="images/icons/publish.svg"> Publish</h3>
@@ -235,7 +235,7 @@
 						<li>Make sure you freeze transformations and delete history.</li>
 					</ul>
 				</p>
-				<img src="images/screenshots/publish.png">
+				<img src="images/screenshots/maya-publish.png">
 
 				<h3><img class="icon" src="images/icons/frame-range.svg"> Set Current Frame Range</h3>
 				<p>Theoretically, this would read into the Asset Browser app thing that we have and make it easier for you to make the correct frame range on any given animated shot. However, we aren't using the Asset Browser anymore, and this button essentially does nothing. So don't click it.</p>
@@ -258,7 +258,7 @@
 				<p>If you tag something that should not be tagged or for any other reason you need to untag something then you can untag it with this tool. Since objects are untagged by default, you should only have to do it to objects that have been tagged previously.</p>
 
 				<h3><img class="icon" src="images/icons/reference.svg"> Reference a Model or Rig</h3>
-				<img src="images/screenshots/reference.png">
+				<img src="images/screenshots/maya-reference.png">
 				<p>A reference is like importing a model or rig into your scene except it pulls from another location and updates as the owner of that file updates it. This is especially important for character rigs as the riggers will continue to polish deformations and your referenced rig will update with those changes. You will need to re-reference your rig(s) every time a change is made to the rig in order to see it in your animation; this will not affect your keyframes.
 				Other notes: You cannot modify a model or rig when it is referenced. Referenced rigs are generally faster and less expensive to run than the real rig itself.</p>
 
@@ -266,7 +266,7 @@
 				<p>Click to be inspired by your favorite faculty's inspirational quotes. Also submit more quotes to the tool_suggestions channel on Slack.</p>
 
 				<h3><img class="icon" src="images/icons/gnome.svg"> Gnomic Test Geo (AKA Summon the Garden Gnome button)</h3>
-				<img src="images/screenshots/gnome.png">
+				<img src="images/screenshots/maya-gnome.png">
 				<p>Need to blow something up or set it on fire? Have we got the gnome for you! This is kind of like Myth Buster's "Buster" test dummy except a garden gnome and also virtual. Have fun, go play with scissors and fire on us.</p>
 
 				<h3><img class="icon" src="images/icons/ik-fk.svg"> IK FK Snapping</h3>
@@ -279,7 +279,7 @@
 				<h3><img class="icon" src="images/icons/rollback.svg"> Rollback Body to Previous Version</h3>
 				<p>Occasionally, you might publish a scene or model that for some reason you wish you didn't because the last version was better. Or maybe the current published version has crashed and there's no saving it, so the best bet is to go back in time and reverse the damage.</p>
 				<p>That's what rollback is for! Rollback will take you back to a previous version. To use it, click the element you want to rollback to and click the  date of the version you want.</p>
-				<img src="images/screenshots/rollback.png">
+				<img src="images/screenshots/maya-rollback.png">
 				<p>To rollback an element first check it out. Then click the rollback button. A window will come up that will list all of the previous publishes for that element. Click on the publish that you want to go back to and click "Rollback." Maya will essentially recall the file from that past publish and republish it so it becomes the current publish (<strong>*Note:</strong> In the list of publishes this publish will now occur twice, once when it was originally published and again when it was rolled back). It will load publish into Maya and you can then start working on it.</p>
 			</div>
 		</div>
@@ -293,7 +293,7 @@
 					<p>Do you remember all of those neat things you learned back in the Maya section? Well, throw them out. They only partially relate to the Houdini pipeline tools and having them tightly coupled in your mind will lead to errors.</p>
 					<p>Let's take a look at Houdini</p>
 					<p>Go ahead and open the film version of Houdini. Now at this point Houdini probably didn't load in the shelf like Maya did. To get there you will need to add it.</p>
-					<img src="images/screenshots/add-houdini-tools-shelf.png"/>
+					<img src="images/screenshots/houdini-add-tools-shelf.png"/>
 					<p><strong>Sidenote:</strong> Additionally you can find all the tools in the menus. Just incase you prefer that to a shelf button. Also tools will show up in the menu first because they are easier to add to the menu then they are to add to the shelf. So if you are looking for a BYU tool and it's not on the shelf, check the menu.</p>
 					<img src="images/screenshots/houdini-menu.png"/>
 					<p>With the tools shelf added in, let's take a look at all of the tools.</p>
@@ -305,7 +305,7 @@
 					<h3><img class="icon" src="images/icons/assemble.svg"> Assemble Asset</h3>
 					<p>To understand how the checkout and publish buttons are different we first need to understand how the assemble asset tool works.</p>
 					<p>In Houdini the method of adding geometry to a scene is typically by using the tab menu in the Network View. In order to add our geometry to Houdini we first need to make digital assets for them. Once we have we will be able to simply tab in all of our assets into Houdini. The assemble asset tool creates the digital assets for you.</p>
-					<img src="images/screenshots/assemble-asset.png"/>
+					<img src="images/screenshots/houdini-assemble-asset.png"/>
 					<p>Find the asset that you want to turn into a digital asset and then click "Assemble." This will load in the alembic that Maya exported when you published it, and turn it into a digital asset. Once the digital asset is created you can add the shaders for the various objects into the digital asset. Once you are pleased with your work, select the digital asset, and then click publish. Now the digital asset is ready for anybody to tab into their scene.</p>
 					<p><strong>Important:</strong> Once the asset is assembled you no longer need to assemble it. You can just tab it in. If you click assemble asset again it will completely rebuild the digital asset, bringing in the alembics from Maya again but it won't bring in any of the shaders that you created. If someone else has already assembled the asset you will receive a message warning you that the asset has already been assembled. You can assemble it again if you want but you will wipe out any changes that may have been there. If you don't need to assemble it again then you can tab it into the network view without assembling it again.</p>
 					<p>If for some reason you do need to reassemble the asset you may find that the <a href="#reassemble-tool-anchor">reassemble tool</a> will do the trick for you without loosing the shader information.</p>
@@ -319,7 +319,7 @@
 							</li>
 							<li>
 								Add shaders and perform whatever other edits (More details below)
-								<img src="images/screenshots/shop-net.png"/>
+								<img src="images/screenshots/houdini-shop-net.png"/>
 								<p>Here you will notice that there is a subnet called "dont_touch_this_subnet." At the time of creating this tool there was an issue with adding displacement to groups for RenderMan for Houdini. The only thing we could come up with was to break the groups into their own geo nodes and store them into this subnet. However we were able to make the interface the same as if we didn't have to do this work around. So you shouldn't have to touch this subnet at all. If you find yourself tempted to put stuff in it or to edit any of it's parameters you should really consider if there is a different way you can accomplish what you are trying to do.</p>
 							</li>
 							<li>Select the digital asset in the network view</li>
@@ -536,7 +536,7 @@
 				</p>
 				<h3>Where Do Files Go When I Check Them Out</h3>
 				<p>When you check out a file the pipeline tools make a copy of the production file for you to work on. This file is yours and you can edit it as you wish without worrying about messing up the production assets.</p>
-				<img src="images/screenshots/users-folder.png">
+				<img src="images/screenshots/general-users-folder.png">
 				<p>Since they are part of the film they can be saved in the groups folder and it won't count against your quota!</p>
 			</div>
 		</div>
