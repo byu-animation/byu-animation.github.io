@@ -341,11 +341,11 @@
 					<p>When you assign the filename of the texture to the shader make sure that the path uses $JOB. When using Grendini $JOB refers to "/groups/grendel" so the path from above would become "$JOB/production/assets/ASSET_NAME/texture/main/cache/TEXTRUE_NAME.tex."</p>
 					<img src="images/screenshots/houdini-asset-geo-shaders-job.png"/>
 					<h4>Asset Parameters</h4>
-					<p>Once the asset has been assembled and all of the shaders have been created you can assign them to the geometry. In the geo node (Img 1) you will find all the parameters for setting up the shaders. The Material tab (Img 2) will have a set of parameters for each geometry group in the alembic. These groups are based off of the pieces of geometry in Maya. If you have 1000 geos in the outliner you will also have 1000 groups that you are going to have to deal with here. Make sure that the geo is clean and organized in Maya so that it is easy to deal with in Houdini. For each group you can assign the material, the displacement, and the displacement bound.</p>
-					<p><strong>Important:</strong>When you are working on the shaders make sure that the paths to the shaders are relative paths. One way this can be achieved is in the operator selector (Img 7) make sure you have "Export Relative Path" checked before you click accept.</p>
+					<p>Once the asset has been assembled and all of the shaders have been created you can assign them to the geometry. In the geo node (Img 2) you will find all the parameters for setting up the shaders. The Material tab (Img 3) will have a set of parameters for each geometry group in the alembic. These groups are based off of the pieces of geometry in Maya. If you have 1000 geos in the outliner you will also have 1000 groups that you are going to have to deal with here. Make sure that the geo is clean and organized in Maya so that it is easy to deal with in Houdini. For each group you can assign the material, the displacement, and the displacement bound.</p>
+					<p><strong>Important:</strong>When you are working on the shaders make sure that the paths to the shaders are relative paths. One way this can be achieved is in the operator selector (Img 1) make sure you have "Export Relative Path" checked before you click accept.</p>
 					<img src="images/screenshots/houdini-asset-geo-shaders-relative-path.png"/><p class="caption">Img 1</p>
-					<p>The RenderMan tab (Img 3) in the geo parameters will have several RenderMan settings such as "Render Polygons as Subdivisions" and "Interpolate Boundary." If there are other RenderMan parameters that would be good to include here let us know and we can add it.</p>
-					<p>If the geometry hasn't loaded you can try going to the Troubleshooting tab (Img 4) and click the "Refresh" button. This will try and reload the geometry from the alembic. If it still doesn't work feel free to poke around any of the nodes and see if you can find the problem. If all else fails just find a Pipeline technician to help fix the problem.</p>
+					<p>The RenderMan tab (Img 4) in the geo parameters will have several RenderMan settings such as "Render Polygons as Subdivisions" and "Interpolate Boundary." If there are other RenderMan parameters that would be good to include here let us know and we can add it.</p>
+					<p>If the geometry hasn't loaded you can try going to the Troubleshooting tab (Img 5) and click the "Refresh" button. This will try and reload the geometry from the alembic. If it still doesn't work feel free to poke around any of the nodes and see if you can find the problem. If all else fails just find a Pipeline technician to help fix the problem.</p>
 				</div>
 				<div class="row">
 					<div class="three columns"><img src="images/screenshots/houdini-asset-geo-selected.png"/><p class="caption">Img 2</p></div>
@@ -355,10 +355,10 @@
 				</div>
 				<div class="row">
 					<div class="twelve columns">
-						<p>There are also some new parameters on the digital asset (Img 5). In the Grendel tab (Img 6-8) there are options for loading different versions of the asset. These versions can be selected from the "Source Menu" in the Grendel Tab.</p>
-						<p>First, the Object Space (Img 6) option will load the geometry as it was modeled in Maya.</p>
-						<p>The Set Space option (Img 7) allows you to select a set in the film and if this asset appears in that set if will load the translation, rotation, and scale of this asset so it will fit into that set. The set can be selected from the set menu that will appear if the source is set to "Set."</p>
-						<p>The Shot Space option (Img 8) will load in any shot specific animation for this asset. If in the shot the asset remains static then you can leave the source set to Set Space. However if the asset moves then you can select the shot and the tool will load in the dynamic alembic for that specific shot.</p>
+						<p>There are also some new parameters on the digital asset (Img 6). In the Grendel tab (Img 7-9) there are options for loading different versions of the asset. These versions can be selected from the "Source Menu" in the Grendel Tab.</p>
+						<p>First, the Object Space (Img 7) option will load the geometry as it was modeled in Maya.</p>
+						<p>The Set Space option (Img 8) allows you to select a set in the film and if this asset appears in that set if will load the translation, rotation, and scale of this asset so it will fit into that set. The set can be selected from the set menu that will appear if the source is set to "Set."</p>
+						<p>The Shot Space option (Img 9) will load in any shot specific animation for this asset. If in the shot the asset remains static then you can leave the source set to Set Space. However if the asset moves then you can select the shot and the tool will load in the dynamic alembic for that specific shot.</p>
 						<p>Additionally there is a hide toggle that will allow you to hide or show the asset and a "Reload" button that is just the "Refresh" button from above that has been promoted up to the HDA level for your convenience.</p>
 					</div>
 				</div>
