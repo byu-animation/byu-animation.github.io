@@ -40,7 +40,7 @@
 			<div class="twelve columns">
 				<h2>How to Setup Crowds Cycle Assets in Maya</h2>
 
-				<p>Making a crowd cycle asset is pretty much the same as making a model, rig, or animation. There are a couple of important differences for crowds so please take a look all the way through it please.</p>
+				<p>While making a crowd cycle asset is similar to making a model, rig, or animation, there are a couple of important differences for crowds, so please take a look all the way through these instuctions.</p>
 
 				<h3><img class="icon" src="images/icons/new-body.svg"> Create Body</h3>
 				<img src="images/screenshots/maya-body-creation.png">
@@ -63,24 +63,29 @@
 					<br>
 					There are certain accessories that will help with the randomization:
 					<ul>
-						<li>Helmet: use whatever helmet you want.</li>
+						<li>Shield: use viking_misc_shields <b>please please please</b> it has to be that one.</li>
+						<li>Beard: Don't add a beard; we'll take care of that in Houdini. Also keep in mind that for animation the beard will only follow the mouth movement. There will not be any additional animation for it.</li>
 						<li>Weapon:
 							<ul>
-								<li>For one handed weapons you should be able to use whatever you want as well. However, it might be easier to use the viking_weapon_sword01 because it doesn't have several versions inside of it like the viking_misc_swords.</li>
+								<li>For one handed weapons it might be easier to use the viking_weapon_sword01 because it doesn't have several versions inside of it like the viking_misc_swords. However you should be able to use whichever weapon you want.</li>
 								<li>For two handed weapons you should problaby use the viking_misc_spears because I think its the only two handed weapon we have.</li>
 							</ul>
 						</li>
-						<li>Shield: use viking_misc_shields <b>please please please</b> it has to be that one.</li>
-						<li>Beard: Don't add a beard; we'll take care of that in Houdini. Also keep in mind that for animation the beard will only follow the mouth movement. There will not be any additional animation for it.</li>
+						<li>Helmet: use whatever helmet you want.</li>
 					</ul>
 					If your cycle doesn't use a certain accessory (eg a viking using both hands on a spear wouldn't have a shield) just don't add that accessory.
 				</p>
 
 				<h3><img class="icon" src="images/icons/tag.svg"> Tag Selected Objects for Export</h3>
-				<p>Please make sure that all of the geo that you want to be exported is tagged. To see if it is tagged select the group/geo in the outliner and look in the channels for the selected item. It should have a channel called "BYU Alembic Export Flag." It it doesn't have the tag go ahead and added. </p>
-				<p><b>Note:</b> The tag is based on if the channel is there or not and not if the tag is set to on or off.</p>
-				<p><b>Note:</b> Please don't tag rigs or controls it should just be the geometry.</p>
-				<p><b>Note:</b> If a group is tagged then everything in the group will be exported.</p>
+				<p>Please make sure that all of the geo that you want to be exported is tagged. To see if it is tagged select the group/geo in the outliner and look in the channels for the selected item. It should have a channel called "BYU Alembic Export Flag." It it doesn't have the tag go ahead and add it by clicking the tag tool in the shelf. </p>
+				<p><b>Note:</b> The tag is based on if the channel is there or not and not if the tag is set to on or off. If you need to remove a tag there is an untagg tool. <img class="icon" src="images/icons/untag.svg"></p>
+
+				<img src="images/screenshots/maya-alembic-export-tag.png">
+
+				<p><b>Note:</b> Please don't tag rigs or controls. Only the geometry should be tagged.</p>
+				<p><b>Note:</b> If a group is tagged then everything in the group will be exported. In the example below since the boxes_geo group is tagged both first_box and second_box will be exported. If the entire boxes groups was tagged then the boxes_controls group would also be exported and that is not good.</p>
+
+				<img src="images/screenshots/maya-tagging-hierarchy.png">
 
 				<h3>Animation</h3>
 				<p>The animation should be able to be played in a loop, but remember that you need to make sure that the last frame isn't the same as the first frame or else that pose will get two frames worth of time. The last frame needs to lead into the first frame.</p>
@@ -93,18 +98,22 @@
 
 		<div class="row">
 			<div class="twelve columns">
-				<a id="newstuff-anchor"></a>
-				<h2>The New Stuff</h2>
+				<a id="using-a-cycle-anchor"></a>
+				<h2>Using a Cycle in Your Animation</h2>
 				<p>Now that your cycle is created you can bring it into your shot. You will open your shot reference in how ever many copies of your cycle you need, draw out the same number of paths, make the vikings follow that path, and publish your shot.</p>
 				<h3><img class="icon" src="images/icons/reference.svg"> Reference the Cycle</h3>
 				<p>You can find your cycle by selecting the cycle option from the menu in the reference window.</p>
 				<img src="images/screenshots/maya-crowd-cycle-reference.png">
-				<h2>Animating with the Cycle</h2>
+				<h3>Animating with the Cycle</h3>
 				<p>Now that the reference is in you can start animating with it. When it references in the cycle alembic it will parent it to the controls that are highlighted in the image bellow.</p>
-				<img src="images/screenshots/cycle-controls.png">
+				<img src="images/screenshots/maya-cycle-controls.png">
 				<p>For the animation you will make a path and then just have the viking follow that path. Thats it! They need to be moving a long a path inorder for it to go into our crowd tool in Houdini.</p>
-				<h2>Publishing</h2>
+				<h3>Tagging</h3>
+				<p>When you reference a cycle it is automatically tagged. You don't have to worry about it.</p>
+				<h3>Publishing</h3>
 				<p>When you publish your shot you will be prompted to export the crowd animation. Every time that you make changes to how the crowd cycle references are animated you will need to export the crowd animation. Otherwise you can dismiss that window.</p>
+				<h3>Conclusion</h3>
+				<p>That's it! Now that you have finished animating your crowd you can hand it off to the the fx team who can take care of taking it into Houdini.</p>
 			</div>
 		</div>
 	</div>
